@@ -1,0 +1,7 @@
+# ninja log v5
+0	257	7233339552156582	CMakeFiles/unique_pointer_test.dir/main.cpp.obj	9f8b81d2fbac4131
+258	327	7233339552846583	unique_pointer_test.exe	41a94bd0cb5d1ed2
+1	267	7233343121021913	CMakeFiles/unique_pointer_test.dir/main.cpp.obj	9f8b81d2fbac4131
+268	324	7233343121571913	unique_pointer_test.exe	41a94bd0cb5d1ed2
+2	287	7233343419542059	CMakeFiles/unique_pointer_test.dir/main.cpp.obj	9f8b81d2fbac4131
+288	347	7233343420112007	unique_pointer_test.exe	41a94bd0cb5d1ed2

@@ -1,0 +1,15 @@
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/HelloWorldFramework.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/CMakeFiles/imgui.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/CMakeFiles/edit_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/CMakeFiles/rebuild_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/glfw_bin/CMakeFiles/edit_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/glfw_bin/CMakeFiles/rebuild_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/glfw_bin/src/CMakeFiles/update_mappings.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/glfw_bin/src/CMakeFiles/glfw.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/glfw_bin/src/CMakeFiles/edit_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/imgui-1.88/glfw_bin/src/CMakeFiles/rebuild_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/glad/CMakeFiles/glad.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/glad/CMakeFiles/edit_cache.dir
+C:/Qt/Projects/Qt/build-HelloWorld-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/lib/glad/CMakeFiles/rebuild_cache.dir
