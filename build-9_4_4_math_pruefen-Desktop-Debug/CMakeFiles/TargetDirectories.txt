@@ -1,0 +1,7 @@
+/home/roman/crack++ dev code/build-9_4_4_math_pruefen-Desktop-Debug/CMakeFiles/9_4_4_math_pruefen.dir
+/home/roman/crack++ dev code/build-9_4_4_math_pruefen-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/roman/crack++ dev code/build-9_4_4_math_pruefen-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/crack++ dev code/build-9_4_4_math_pruefen-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/roman/crack++ dev code/build-9_4_4_math_pruefen-Desktop-Debug/CMakeFiles/install.dir
+/home/roman/crack++ dev code/build-9_4_4_math_pruefen-Desktop-Debug/CMakeFiles/install/local.dir
+/home/roman/crack++ dev code/build-9_4_4_math_pruefen-Desktop-Debug/CMakeFiles/install/strip.dir

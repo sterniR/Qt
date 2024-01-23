@@ -1,0 +1,7 @@
+/home/roman/crack++ dev code/build-math_funktion-Desktop-Debug/CMakeFiles/math_funktion.dir
+/home/roman/crack++ dev code/build-math_funktion-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/roman/crack++ dev code/build-math_funktion-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/crack++ dev code/build-math_funktion-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/roman/crack++ dev code/build-math_funktion-Desktop-Debug/CMakeFiles/install.dir
+/home/roman/crack++ dev code/build-math_funktion-Desktop-Debug/CMakeFiles/install/local.dir
+/home/roman/crack++ dev code/build-math_funktion-Desktop-Debug/CMakeFiles/install/strip.dir

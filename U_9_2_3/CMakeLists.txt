@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(U_9_2_3 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(U_9_2_3 main.cpp)
+
+include(GNUInstallDirs)
+install(TARGETS U_9_2_3
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)

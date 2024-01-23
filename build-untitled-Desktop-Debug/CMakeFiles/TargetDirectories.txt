@@ -1,0 +1,7 @@
+/home/roman/Documents/Qt home/build-untitled-Desktop-Debug/CMakeFiles/untitled.dir
+/home/roman/Documents/Qt home/build-untitled-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt home/build-untitled-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt home/build-untitled-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt home/build-untitled-Desktop-Debug/CMakeFiles/install.dir
+/home/roman/Documents/Qt home/build-untitled-Desktop-Debug/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt home/build-untitled-Desktop-Debug/CMakeFiles/install/strip.dir
