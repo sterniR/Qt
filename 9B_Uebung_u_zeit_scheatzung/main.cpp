@@ -11,7 +11,7 @@ void zEingabe()
     int zahl;
     double abweichung;
 
-
+    // Hello mee :)
     do
     {
         std::cout << "Bitte Zeit in Sekunden eingeben, zwischen 5 und 10: ";
