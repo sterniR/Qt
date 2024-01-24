@@ -1,0 +1,9 @@
+# ninja log v5
+0	280	1705068005154665948	CMakeFiles/math_runden.dir/main.cpp.o	881bec2d1cf6adb4
+280	309	1705068005186666245	math_runden	d4fe32e181d8d0cd
+1	277	1705068242580866738	CMakeFiles/math_runden.dir/main.cpp.o	881bec2d1cf6adb4
+277	306	1705068242608866997	math_runden	d4fe32e181d8d0cd
+0	278	1705068384086177889	CMakeFiles/math_runden.dir/main.cpp.o	881bec2d1cf6adb4
+278	306	1705068384118178184	math_runden	d4fe32e181d8d0cd
+1	274	1705068411894435535	CMakeFiles/math_runden.dir/main.cpp.o	881bec2d1cf6adb4
+274	302	1705068411922435794	math_runden	d4fe32e181d8d0cd

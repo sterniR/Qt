@@ -1,0 +1,7 @@
+/home/roman/qt code/build-klasse_2-Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/klasse_2.dir
+/home/roman/qt code/build-klasse_2-Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/roman/qt code/build-klasse_2-Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/qt code/build-klasse_2-Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/list_install_components.dir
+/home/roman/qt code/build-klasse_2-Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/install.dir
+/home/roman/qt code/build-klasse_2-Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/install/local.dir
+/home/roman/qt code/build-klasse_2-Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/install/strip.dir
