@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-772571697fb970958b30.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "9C_u_kopf_zahlung",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "9C_u_kopf_zahlung::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-9C_u_kopf_zahlung-Debug-24a770162815d9237ed2.json",
+					"name" : "9C_u_kopf_zahlung",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/roman/Documents/Qt/build-9C_u_kopf_zahlung-Desktop_Qt_6_6_1_GCC_64bit-Debug",
+		"source" : "/home/roman/Documents/Qt/9C_u_kopf_zahlung"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
