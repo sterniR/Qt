@@ -6,7 +6,9 @@
 #include <random>
 #include <chrono>
 #include <iomanip>
+
 std::mt19937 generator;
+
 int genInt()
 {
     static std::uniform_int_distribution<int> dist(2, 5);
@@ -14,7 +16,8 @@ int genInt()
 }
 double genDouble() {
     static std::uniform_real_distribution<double> dist(5.00, 14.99);
-    return dist(generator);
+    double zahl = std::ceil(dist(generator) * 100.00) / 100.00;
+    return zahl;
 }
 constexpr double round_pos_twod(double v)
 {
@@ -22,12 +25,12 @@ constexpr double round_pos_twod(double v)
 }
 int main()
 {
+    std::cout << std::fixed << std::setprecision(2);
     generator.seed(std::chrono::system_clock::now().time_since_epoch().count());
     int artikelAnzahl;
-    double ergebnis, rechnung, zahl;
+    double ergebnis = 0.00, rechnung = 0.00;
     std::string wechselGeld;
     std::vector<double> artikelFeld;
-    std::istringstream eingabeStrom;
 
     artikelAnzahl = genInt();
     artikelFeld.resize(artikelAnzahl);
@@ -36,11 +39,10 @@ int main()
     std::cout << "Zu zahlen: " ;
     for(int i = 0; i < artikelFeld.size(); i++)
     {
-        std::cout << std::fixed << std::setprecision(2);
         std::cout << artikelFeld.at(i) << " ";
     }
     std::cout << std::endl;
-    std::cout << "Gehalt: 100.00" << std::endl;
+    std::cout << "Portemonnaie: 100.00" << std::endl;
     std::cout << "Wechselgeld: ";
     std::getline(std::cin, wechselGeld);
     try {
@@ -49,17 +51,23 @@ int main()
         std::cout << "Falsch. Keine Zahl." << std::endl;
     }
 
-
-    const double sum = std::accumulate(artikelFeld.begin(), artikelFeld.end(), 0.);
-    zahl = round_pos_twod(sum);
-    if(zahl == ergebnis)
+    for(int i = 0; i < artikelFeld.size(); i++)
     {
-        std::cout << "Richtig: " << wechselGeld << " " << zahl << '\n';
+        rechnung += artikelFeld.at(i);
+
+    }
+    double final = 100.00 - rechnung;
+    if(ergebnis == final)
+    {
+        std::cout << "Richtig" << '\n';
+        std::cout << "Eingabe: " << ergebnis << '\n';
+        std::cout << "Wechselgeld: " << final << '\n';
     }
     else
     {
-        std::cout << "Falsch: " << wechselGeld << " " << zahl << '\n';
-
+        std::cout << "Falsch" << '\n';
+        std::cout << "Eingabe: " << ergebnis << '\n';
+        std::cout << "Wechselgeld: " << final << '\n';
     }
 
 
