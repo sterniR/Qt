@@ -2,17 +2,15 @@
 #include <iostream>
 #include <cmath>
 #include <string>
-#include <sstream>
 #include <random>
 #include <chrono>
 #include <iomanip>
-
 std::mt19937 generator;
-
 int genInt()
 {
     static std::uniform_int_distribution<int> dist(2, 5);
     return dist(generator);
+    //Hallo
 }
 double genDouble() {
     static std::uniform_real_distribution<double> dist(5.00, 14.99);
@@ -31,10 +29,8 @@ int main()
     double ergebnis = 0.00, rechnung = 0.00;
     std::string wechselGeld;
     std::vector<double> artikelFeld;
-
     artikelAnzahl = genInt();
     artikelFeld.resize(artikelAnzahl);
-
     std::generate(artikelFeld.begin(), artikelFeld.end(), genDouble);
     std::cout << "Zu zahlen: " ;
     for(int i = 0; i < artikelFeld.size(); i++)
@@ -50,11 +46,9 @@ int main()
     } catch (const std::invalid_argument&) {
         std::cout << "Falsch. Keine Zahl." << std::endl;
     }
-
     for(int i = 0; i < artikelFeld.size(); i++)
     {
         rechnung += artikelFeld.at(i);
-
     }
     double final = 100.00 - rechnung;
     if(ergebnis == final)
@@ -69,9 +63,4 @@ int main()
         std::cout << "Eingabe: " << ergebnis << '\n';
         std::cout << "Wechselgeld: " << final << '\n';
     }
-
-
-
-    //asm("int3");
-
 }
