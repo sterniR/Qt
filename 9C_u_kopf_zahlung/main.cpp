@@ -10,7 +10,6 @@ int genInt()
 {
     static std::uniform_int_distribution<int> dist(2, 5);
     return dist(generator);
-    //Hallo
 }
 double genDouble() {
     static std::uniform_real_distribution<double> dist(5.00, 14.99);
@@ -64,3 +63,5 @@ int main()
         std::cout << "Wechselgeld: " << final << '\n';
     }
 }
+
+//Test commit 1/26/2024
