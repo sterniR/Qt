@@ -1,0 +1,7 @@
+/home/roman/Documents/Qt/build-9_28-Desktop-Debug/CMakeFiles/9_28.dir
+/home/roman/Documents/Qt/build-9_28-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/build-9_28-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/build-9_28-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/build-9_28-Desktop-Debug/CMakeFiles/install.dir
+/home/roman/Documents/Qt/build-9_28-Desktop-Debug/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/build-9_28-Desktop-Debug/CMakeFiles/install/strip.dir
