@@ -1,0 +1,6 @@
+# ninja log v5
+0	150	1706649557977031335	CMakeFiles/header_test.dir/main.cpp.o	3035d143b4df199
+1	25	1706649630985771959	CMakeFiles/header_test.dir/add.cpp.o	ae83d3be2b6e4fae
+25	66	1706649631025772372	header_test	2e2ea36d81d27c9a
+1	148	1706649641353879398	CMakeFiles/header_test.dir/main.cpp.o	3035d143b4df199
+148	179	1706649641385879730	header_test	2e2ea36d81d27c9a

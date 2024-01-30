@@ -1,0 +1,7 @@
+/home/roman/Documents/Qt/build-header_test-Desktop-Debug/CMakeFiles/header_test.dir
+/home/roman/Documents/Qt/build-header_test-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/build-header_test-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/build-header_test-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/build-header_test-Desktop-Debug/CMakeFiles/install.dir
+/home/roman/Documents/Qt/build-header_test-Desktop-Debug/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/build-header_test-Desktop-Debug/CMakeFiles/install/strip.dir
