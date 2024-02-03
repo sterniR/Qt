@@ -1,0 +1,7 @@
+/home/roman/Documents/Qt/build-10_8_konstruktor-Desktop-Debug/CMakeFiles/10_8_konstruktor.dir
+/home/roman/Documents/Qt/build-10_8_konstruktor-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/build-10_8_konstruktor-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/build-10_8_konstruktor-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/build-10_8_konstruktor-Desktop-Debug/CMakeFiles/install.dir
+/home/roman/Documents/Qt/build-10_8_konstruktor-Desktop-Debug/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/build-10_8_konstruktor-Desktop-Debug/CMakeFiles/install/strip.dir
