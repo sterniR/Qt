@@ -10,61 +10,23 @@ class personTyp
 private:
     std::string name;
     std::string nachname;
-    std::string geburtsdatum;
-    std::string gehalt;
-    std::string personalnummer;
+    std::string geburtstag;
+    double gehalt;
+    int personalnummer;
 public:
-    void ini(const std::string&, const std::string&, const std::string&, const std::string&, const std::string&);
-    static bool weiter();
-    friend std::ostream& operator << (std::ostream&, const personTyp&);
     void eingabe();
-    void ausgabeTabelle(const std::vector<personTyp>&);
-    void Feld(std::vector<personTyp>&);
-
+    void werteZuweisen(const std::string&, const std::string&, const std::string&, const double&, const int&);
+    //void werteZuweisen(const std::string&, const std::string&, const std::string&, const double&, const int&);
+    static bool weiter();
+    static void ausgabeTabelle(const std::vector<personTyp>&);
 };
 
-void personTyp::ini(const std::string& n, const std::string& nn, const std::string& gd, const std::string& gh, const std::string& pn)
-{
-    name = n;
-    nachname = nn;
-    geburtsdatum = gd;
-    gehalt = gh;
-    personalnummer = pn;
-}
-
-void eingabe()
-{
-    std::string eingabename;
-    std::string eingabenachname;
-    std::string eingabegeburtsdatum;
-    double eingabegehalt;
-    int eingabepersonalnummer;
-    std::vector<personTyp> Feld;
-
-    std::cout << "Name: ";
-    getline(std::cin, eingabename);
-
-    std::cout << "Nachname: ";
-    getline(std::cin, eingabenachname);
-
-    std::cout << "Geburtsdatum: ";
-    getline(std::cin, eingabegeburtsdatum);
-
-    std::cout << "Gehalt: ";
-    std::cin >> eingabegehalt;
-    std::string eingabegehaltString = std::to_string(eingabegehalt); //String
-
-    std::cout << "Personalnummer: ";
-    std::cin >> eingabepersonalnummer;
-    std::string eingabepersonalnummerString = std::to_string(eingabepersonalnummer); //String
-
-    Feld.at(0).ini(eingabename, eingabenachname, eingabegeburtsdatum, eingabegehaltString, eingabepersonalnummerString);
-}
-
-bool weiter(std::string p)
+bool personTyp::weiter()
 {
     bool check;
     check = false;
+    std::string p;
+
     do
     {
         std::cout << "Datensatz eingeben (J/N): ";
@@ -82,27 +44,97 @@ bool weiter(std::string p)
     return check;
 }
 
-
-std::ostream& operator << (std::ostream& om, const personTyp& p)
+void personTyp::werteZuweisen(const std::string& n, const std::string& nn, const std::string& gt, const double& g, const int& pn)
 {
-    om << p.name << " " << p.nachname << " " << p.geburtsdatum
-        << " " << p.gehalt << " " << p.personalnummer << '\n';
-    return om;
+    name = n;
+    nachname = nn;
+    geburtstag = gt;
+    gehalt = g;
+    personalnummer = pn;
 }
 
-void ausgabeTabelle(std::vector<personTyp>& Feld)
+void personTyp::eingabe()
+{
+    std::string nameEingabe;
+    std::string nachnameEingabe;
+    std::string geburtstagEingabe;
+    double gehaltEingabe;
+    int personalnummerEingabe;
+    std::string eingabe;
+    std::istringstream EingabeStrom;
+
+    std::cout << "Name: ";
+    std::getline(std::cin, nameEingabe);
+    std::cout << '\n';
+
+    std::cout << "Nachname: ";
+    std::getline(std::cin, nachnameEingabe);
+    std::cout << '\n';
+
+    std::cout << "Geburtstag: ";
+    std::getline(std::cin, geburtstagEingabe);
+    while (geburtstagEingabe == "" || geburtstagEingabe.size() != 10 || geburtstagEingabe.at(2) != '.' || geburtstagEingabe.at(5) != '.' )
+    {
+        std::cout << "Geburtstag: ";
+        std::getline(std::cin, geburtstagEingabe);
+    }
+    std::cout << '\n';
+
+    std::cout << "Gehalt: ";
+    std::getline(std::cin, eingabe);
+    if(eingabe == "")
+        gehaltEingabe = 0.0;
+    else
+    {
+        if(eingabe.length() >= 10)
+        {
+            eingabe.erase(10);
+        }
+        EingabeStrom.str(eingabe);
+        EingabeStrom >> gehaltEingabe;
+        EingabeStrom.clear();
+    }
+    std::cout << '\n';
+
+    std::cout << "Personalnummer (Max. 5 Ziffern): ";
+    std::getline(std::cin, eingabe);
+    if(eingabe == "")
+        personalnummerEingabe = 0.0;
+    else
+    {
+        if(eingabe.length() >= 5)
+        {
+            eingabe.erase(5);
+        }
+        EingabeStrom.str(eingabe);
+        EingabeStrom >> personalnummerEingabe;
+        EingabeStrom.clear();
+    }
+    std::cout << '\n';
+
+    personTyp::werteZuweisen(nameEingabe, nachnameEingabe, geburtstagEingabe, gehaltEingabe, personalnummerEingabe);
+}
+
+void personTyp::ausgabeTabelle(const std::vector<personTyp>& pFeld)
 {
     std::cout << std::left
-              << std::setw(16) << "Name"
-              << std::setw(20) << "Nachname"
-            << std::right
-              << std::setw(15) << "Personalnummer"
-              << std::setw(15) << "Gehalt"
-              << std::setw(15) << "Geburtsdatum" << std::endl;
-    for(personTyp &p : Feld)
-    {
-        std::cout << p << '\n';
-    }
+         << std::setw(16) << "Name"
+         << std::setw(20) << "Nachname"
+         << std::right
+         << std::setw(15) << "Personalnummer"
+         << std::setw(15) << "Gehalt"
+         << std::setw(15) << "Geburtsdatum" << '\n';
+
+    for(const personTyp& p : pFeld)
+    //for(int i=0; i<p.at(0).name.size();i++)
+        std::cout << std::left << std::fixed << std::setprecision(2)
+                  << std::setw(16) << p.name.substr(0, 15)
+                  << std::setw(18) << p.nachname.substr(0, 15)
+             << std::right
+                  << std::setw(17) << p.personalnummer
+                  << std::setw(15) << p.gehalt
+                  << std::setw(15) << p.geburtstag << std::endl;
+    std::cout << std::endl;
 }
 
 int main()
@@ -115,4 +147,7 @@ int main()
         personNeu.eingabe();
         personFeld.push_back(personNeu);
     }
+    if(personFeld.empty())
+        return 0;
+    personTyp::ausgabeTabelle(personFeld);
 }
