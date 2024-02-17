@@ -9,9 +9,14 @@ private:
 public:
     bruch();
     bruch(const int&);
-    bruch(const int& a, const int& b);
-    void b1();
+    bruch(const int&, const int&);
     bruch operator + (bruch&);
+    bruch operator * (bruch&);
+    bruch operator / (bruch&);
+    bruch operator - (bruch&);
+    bruch operator > (bruch&);
+    bruch operator < (bruch&);
+    bruch operator == (bruch&);
     friend std::ostream& operator << (std::ostream&, const bruch&);
 
 };
@@ -28,6 +33,9 @@ bruch::bruch(const int& a)
 {
     int z = a;
     int n = 1;
+    while (z % 2 == false) {
+        z = a / 2;
+    }
     zeahler = z;
     nenner = n;
 }
@@ -36,15 +44,96 @@ bruch::bruch(const int& a, const int& b)
 {
     int z = a;
     int n = b;
+    int x;
+    int y;
+    while(z % 2 == false && n % 2 == false)
+    {
+        if (z % 7 == false && n % 7 == false) {
+            z = z / 7;
+            n = n / 7;
+        }
+        else if (z % 5 == false && n % 5 == false) {
+            z = z / 5;
+            n = n / 5;
+        }
+        else if (z % 3 == false && n % 3 == false) {
+            z = z / 3;
+            n = n / 3;
+        }
+        else if (z % 2 == false && n % 2 == false) {
+            z = z / 2;
+            n = n / 2;
+        }
+    }
     zeahler = z;
     nenner = n;
 }
 
-bruch bruch::operator + (bruch& ObjektPlus)
+bruch bruch::operator+(bruch& Objekt)
 {
     bruch pTemp = *this;
-    ObjektPlus = (pTemp.zeahler / pTemp.nenner) + (ObjektPlus.zeahler / ObjektPlus.nenner);
+    bruch ObjektPlus;
+    ObjektPlus.zeahler = Objekt.zeahler + pTemp.zeahler;
+    ObjektPlus.nenner = Objekt.nenner + pTemp.nenner;
+    while (ObjektPlus.zeahler % 2 == false) {
+        ObjektPlus.zeahler = ObjektPlus.zeahler / 2;
+    }
+    while (ObjektPlus.nenner % 2 == false) {
+        ObjektPlus.nenner = ObjektPlus.nenner / 2;
+    }
     return ObjektPlus;
+}
+
+bruch bruch::operator*(bruch& Objekt)
+{
+    bruch pTempt = *this;
+    bruch ObjektAusgabe;
+    ObjektAusgabe.zeahler = Objekt.zeahler * pTempt.zeahler;
+    ObjektAusgabe.nenner = Objekt.nenner * pTempt.nenner;
+    while (ObjektAusgabe.zeahler % 2 == false && ObjektAusgabe.nenner % 2 == false) {
+        ObjektAusgabe.zeahler = ObjektAusgabe.zeahler / 2;
+        ObjektAusgabe.nenner = ObjektAusgabe.nenner / 2;
+    }
+    return ObjektAusgabe;
+}
+
+bruch bruch::operator/(bruch& Objekt)
+{
+    bruch pTempt = *this;
+    bruch ObjektAusgabe;
+    ObjektAusgabe.zeahler = pTempt.zeahler / Objekt.zeahler;
+    ObjektAusgabe.nenner = pTempt.nenner / Objekt.nenner;
+    while (ObjektAusgabe.zeahler % 2 == false && ObjektAusgabe.nenner % 2 == false) {
+        ObjektAusgabe.zeahler = ObjektAusgabe.zeahler / 2;
+        ObjektAusgabe.nenner = ObjektAusgabe.nenner / 2;
+    }
+    return ObjektAusgabe;
+}
+
+bruch bruch::operator-(bruch& Objekt)
+{
+    bruch pTempt = *this;
+    bruch ObjektAusgabe;
+    ObjektAusgabe.zeahler = pTempt.zeahler / pTempt.nenner - Objekt.zeahler / Objekt.nenner;
+    ObjektAusgabe.nenner = pTempt.zeahler / pTempt.nenner - Objekt.zeahler / Objekt.nenner;
+    while (ObjektAusgabe.zeahler % 2 == false && ObjektAusgabe.nenner % 2 == false) {
+        ObjektAusgabe.zeahler = ObjektAusgabe.zeahler / 2;
+        ObjektAusgabe.nenner = ObjektAusgabe.nenner / 2;
+    }
+    return ObjektAusgabe;
+}
+
+bruch bruch::operator<(bruch& Objekt)
+{
+    bruch pTempt = *this;
+    bruch ObjektAusgabe;
+    if(pTempt.zeahler/pTempt.nenner > Objekt.zeahler/Objekt.nenner)
+    {
+        return true;
+    }
+    else
+        return false;
+
 }
 
 std::ostream& operator << (std::ostream& om, const bruch& b)
@@ -53,11 +142,24 @@ std::ostream& operator << (std::ostream& om, const bruch& b)
     return om;
 }
 
+
 int main()
 {
     bruch b1;           std::cout << "b1: " << b1 << '\n';
     bruch b2(7);        std::cout << "b2: " << b2 << '\n';
     bruch b3(6,5);      std::cout << "b3: " << b3 << '\n';
-    bruch b4(1,5);      std::cout << "b4: " << b4 << '\n';
+    bruch b4(2,10);     std::cout << "b4: " << b4 << '\n';
+    bruch b5 = b3 * b4; std::cout << "b5: " << b5 << '\n';
+    bruch b6 = b3 / b4; std::cout << "b6: " << b6 << '\n';
     bruch b7 = b3 + b4; std::cout << "b7: " << b7 << '\n';
+    bruch b8 = b3 - b4; std::cout << "b8: " << b8 << '\n';
+    bruch b9(3, 2);     std::cout << "b9: " << b9 << std::endl;
+    //bruch b10 = b3 + b4 * b9; std::cout << "b10: " << b10 << std::endl;
+    bruch b11 = (b3 + b4) * b9; std::cout << "b11: " << b11 << std::endl;
+    bruch b12(60, 50); std::cout << "b12: " << b12 << std::endl;
+    //if (b3 > b4) std::cout << "b3 > b4" << std::endl;
+    //if(b4 < b3) std::cout << "b4 < b3" << std::endl;
+    //if(b3 == b12) cout << "b3 == b12" << endl;
+    //bruch b13;
+    //b13.eingabe(); cout << "b13: " << b13 << endl;
 }
