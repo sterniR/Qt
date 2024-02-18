@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 
 class bruch
 {
@@ -14,11 +15,11 @@ public:
     bruch operator * (bruch&);
     bruch operator / (bruch&);
     bruch operator - (bruch&);
-    bruch operator > (bruch&);
-    bruch operator < (bruch&);
-    bruch operator == (bruch&);
+    bool operator > (bruch&);
+    bool operator < (bruch&);
+    bool operator == (bruch&);
     friend std::ostream& operator << (std::ostream&, const bruch&);
-
+    void eingabe();
 };
 
 bruch::bruch()
@@ -33,8 +34,21 @@ bruch::bruch(const int& a)
 {
     int z = a;
     int n = 1;
-    while (z % 2 == false) {
-        z = a / 2;
+    while(z % 2 == false && z != 2)
+    {
+        z = z / 2;
+    }
+    while(z % 3 == false && z != 3)
+    {
+        z = z / 3;
+    }
+    while(z % 5 == false && z != 5)
+    {
+        z = z / 5;
+    }
+    while(z % 7 == false && z != 7)
+    {
+        z = z / 7;
     }
     zeahler = z;
     nenner = n;
@@ -48,22 +62,23 @@ bruch::bruch(const int& a, const int& b)
     int y;
     while(z % 2 == false && n % 2 == false)
     {
-        if (z % 7 == false && n % 7 == false) {
-            z = z / 7;
-            n = n / 7;
-        }
-        else if (z % 5 == false && n % 5 == false) {
-            z = z / 5;
-            n = n / 5;
-        }
-        else if (z % 3 == false && n % 3 == false) {
-            z = z / 3;
-            n = n / 3;
-        }
-        else if (z % 2 == false && n % 2 == false) {
-            z = z / 2;
-            n = n / 2;
-        }
+        z = z / 2;
+        n = n / 2;
+    }
+    while(z % 3 == false && n % 3 == false)
+    {
+        z = z / 3;
+        n = n / 3;
+    }
+    while(z % 5 == false && n % 5 == false)
+    {
+        z = z / 5;
+        n = n / 5;
+    }
+    while(z % 7 == false && n % 7 == false)
+    {
+        z = z / 7;
+        n = n / 7 ;
     }
     zeahler = z;
     nenner = n;
@@ -123,17 +138,72 @@ bruch bruch::operator-(bruch& Objekt)
     return ObjektAusgabe;
 }
 
-bruch bruch::operator<(bruch& Objekt)
+bool bruch::operator>(bruch& Objekt)
 {
-    bruch pTempt = *this;
-    bruch ObjektAusgabe;
-    if(pTempt.zeahler/pTempt.nenner > Objekt.zeahler/Objekt.nenner)
-    {
+    bruch pTemp = *this;
+    if(pTemp.zeahler / pTemp.nenner > Objekt.zeahler / Objekt.nenner)
         return true;
-    }
     else
         return false;
+}
 
+bool bruch::operator<(bruch& Objekt)
+{
+    bruch pTemp = *this;
+    if(pTemp.zeahler / pTemp.nenner < Objekt.zeahler / Objekt.nenner)
+        return true;
+    else
+        return false;
+}
+
+bool bruch::operator==(bruch& Objekt)
+{
+    bruch pTemp = *this;
+    if(pTemp.zeahler == Objekt.zeahler && pTemp.nenner == Objekt.nenner)
+        return true;
+    else
+        return false;
+}
+
+void bruch::eingabe()
+{
+    std::string eingabe;
+    std::cout << "Eingabe Zeahler: ";
+    std::getline(std::cin, eingabe);
+    try
+    {
+        this->zeahler = std::stoi(eingabe);
+    } catch (std::exception &e) {
+        std::cout << "Fehler: " << e.what() << '\n';
+    }
+    std::cout << "Eingabe Nenner: ";
+    std::getline(std::cin, eingabe);
+    try
+    {
+        this->nenner = std::stoi(eingabe);
+    } catch (std::exception &e) {
+        std::cout << "Fehler: " << e.what() << '\n';
+    }
+    while(this->zeahler % 2 == false && this->nenner % 2 == false)
+    {
+        this->zeahler = this->zeahler / 2;
+        this->nenner = this->nenner / 2;
+    }
+    while(this->zeahler % 3 == false && this->nenner % 3 == false)
+    {
+        this->zeahler = this->zeahler / 3;
+        this->nenner = this->nenner / 3;
+    }
+    while(this->zeahler % 5 == false && this->nenner % 5 == false)
+    {
+        this->zeahler = this->zeahler / 5;
+        this->nenner = this->nenner / 5;
+    }
+    while(this->zeahler % 7 == false && this->nenner % 7 == false)
+    {
+        this->zeahler = this->zeahler / 7;
+        this->nenner = this->nenner / 7 ;
+    }
 }
 
 std::ostream& operator << (std::ostream& om, const bruch& b)
@@ -141,7 +211,6 @@ std::ostream& operator << (std::ostream& om, const bruch& b)
     om << b.zeahler << "/" << b.nenner;
     return om;
 }
-
 
 int main()
 {
@@ -154,12 +223,17 @@ int main()
     bruch b7 = b3 + b4; std::cout << "b7: " << b7 << '\n';
     bruch b8 = b3 - b4; std::cout << "b8: " << b8 << '\n';
     bruch b9(3, 2);     std::cout << "b9: " << b9 << std::endl;
-    //bruch b10 = b3 + b4 * b9; std::cout << "b10: " << b10 << std::endl;
+    //bruch b10 = b3 + b4 * b9; std::cout << "b10: " << b10 << std::endl; // main.cpp:227:20: Invalid operands to binary expression ('bruch' and 'bruch')
+                                                                          //main.cpp:87:14: candidate function not viable: expects an lvalue for 1st argument
     bruch b11 = (b3 + b4) * b9; std::cout << "b11: " << b11 << std::endl;
     bruch b12(60, 50); std::cout << "b12: " << b12 << std::endl;
-    //if (b3 > b4) std::cout << "b3 > b4" << std::endl;
-    //if(b4 < b3) std::cout << "b4 < b3" << std::endl;
-    //if(b3 == b12) cout << "b3 == b12" << endl;
-    //bruch b13;
-    //b13.eingabe(); cout << "b13: " << b13 << endl;
+    if (b3 > b4)
+        std::cout << "b3 > b4" << std::endl;
+    if (b4 < b3)
+        std::cout << "b4 < b3" << std::endl;
+    if(b3 == b12)
+        std::cout << "b3 == b12" << std::endl;
+    bruch b13;
+    b13.eingabe();
+    std::cout << "b13: " << b13 << std::endl;
 }
