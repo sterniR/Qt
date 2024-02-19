@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 #include <string>
 
 class bruch
@@ -11,7 +10,7 @@ public:
     bruch();
     bruch(const int&);
     bruch(const int&, const int&);
-    bruch operator + (bruch&);
+    bruch operator + (const bruch&) const;
     bruch operator * (bruch&);
     bruch operator / (bruch&);
     bruch operator - (bruch&);
@@ -84,7 +83,7 @@ bruch::bruch(const int& a, const int& b)
     nenner = n;
 }
 
-bruch bruch::operator+(bruch& Objekt)
+bruch bruch::operator+(const bruch& Objekt)const
 {
     bruch pTemp = *this;
     bruch ObjektPlus;
@@ -222,18 +221,17 @@ int main()
     bruch b6 = b3 / b4; std::cout << "b6: " << b6 << '\n';
     bruch b7 = b3 + b4; std::cout << "b7: " << b7 << '\n';
     bruch b8 = b3 - b4; std::cout << "b8: " << b8 << '\n';
-    bruch b9(3, 2);     std::cout << "b9: " << b9 << std::endl;
-    //bruch b10 = b3 + b4 * b9; std::cout << "b10: " << b10 << std::endl; // main.cpp:227:20: Invalid operands to binary expression ('bruch' and 'bruch')
-                                                                          //main.cpp:87:14: candidate function not viable: expects an lvalue for 1st argument
-    bruch b11 = (b3 + b4) * b9; std::cout << "b11: " << b11 << std::endl;
-    bruch b12(60, 50); std::cout << "b12: " << b12 << std::endl;
+    bruch b9(3, 2);     std::cout << "b9: " << b9 << '\n';
+    bruch b10 = b3 + b4 * b9; std::cout << "b10: " << b10 << '\n';
+    bruch b11 = (b3 + b4) * b9; std::cout << "b11: " << b11 << '\n';
+    bruch b12(60, 50); std::cout << "b12: " << b12 << '\n';
     if (b3 > b4)
-        std::cout << "b3 > b4" << std::endl;
+        std::cout << "b3 > b4" << '\n';
     if (b4 < b3)
-        std::cout << "b4 < b3" << std::endl;
+        std::cout << "b4 < b3" << '\n';
     if(b3 == b12)
-        std::cout << "b3 == b12" << std::endl;
+        std::cout << "b3 == b12" << '\n';
     bruch b13;
     b13.eingabe();
-    std::cout << "b13: " << b13 << std::endl;
+    std::cout << "b13: " << b13 << '\n';
 }
