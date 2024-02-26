@@ -50,5 +50,24 @@ private:
 
 void rechteck::werteZuweisen(const double& xPos, const double& yPos, const std::string& f, const double& h, const double& b)
 {
-    figur::werteZuweisen()
+    figur::werteZuweisen(xPos, yPos, f);
+    hoehe = h;
+    breite = b;
+}
+
+void rechteck::skalieren(const double& hoeheFaktor, const double& breiteFaktor)
+{
+    hoehe *= hoeheFaktor;
+    breite *= breiteFaktor;
+}
+
+double rechteck::flaeche()
+{
+    return hoehe * breite;
+}
+
+void rechteck::ausgeben()
+{
+    figur::ausgeben();
+    std::cout << " Rechteck: " << hoehe << " / " << breite << '\n';
 }
