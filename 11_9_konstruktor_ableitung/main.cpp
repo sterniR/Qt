@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class figur
 {
 private:
@@ -36,6 +38,49 @@ figur::~figur()
     std::cout << "figur-Destruktor" << '\n' << '\n';
 }
 
-//Test BranchTestingGit 12:30 3/1/2024
+class rechteck:public figur
+{
+private:
+    double hoehe, breite;
+public:
+    rechteck();
+    rechteck(const double&, const double&, const std::string&, const double&, const double&);
+    void ausgeben();
+    ~rechteck();
+};
 
+rechteck::rechteck()
+{
+    std::cout << "rechteck-Konstruktor ohne Parameter" << std::endl;
+}
+
+rechteck::rechteck(const double& xPos, const double& yPos, const std::string& f, const double& h, const double& b):figur{xPos, yPos, f}
+{
+    std::cout << "rechteck-Konstruktor mit Parametern" << std::endl;
+    hoehe = h;
+    breite = b;
+}
+
+void rechteck::ausgeben()
+{
+    figur::ausgeben();
+    cout << " Rechteck: " << hoehe << " / " << breite << endl;
+}
+
+rechteck::~rechteck()
+{
+    std::cout << "rechteck-Destruktor" << std::endl;
+}
+
+int main()
+{
+    rechteck ra{7.4, 2.3, "Blau", 4.0, 2.6};
+    ra.ausgeben();
+    std::cout << '\n';
+
+    ra.ausgeben();
+    cout << endl;
+    rechteck rb;
+    cout << endl;
+}
 
