@@ -18,5 +18,5 @@ int main()
     std::string bezeichnung = "Apfel, Bio";
 
     textDatei << anzahl << " " << preis << " " << bezeichnung << '\n';
-    textDatei << "12 0.85 Birne" << '\n';
+    textDatei << "12 0.85 Birne" << '\n' << '\n';
 }
