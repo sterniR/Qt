@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-afd5c569a232d4e9ef9c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "12_7_datei_lesen_beliebig",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "12_7_datei_lesen_beliebig::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-12_7_datei_lesen_beliebig-Debug-bc07a24e1163005f5cfa.json",
+					"name" : "12_7_datei_lesen_beliebig",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/roman/Documents/Qt/build-12_7_datei_lesen_beliebig-Desktop_Qt_6_6_1_GCC_64bit-Debug",
+		"source" : "/home/roman/Documents/Qt/12_7_datei_lesen_beliebig"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

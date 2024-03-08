@@ -1,0 +1,9 @@
+# ninja log v5
+0	328	1709899344925409100	CMakeFiles/12_7_datei_lesen_beliebig.dir/main.cpp.o	63878be02d4e7968
+328	374	1709899344973409570	12_7_datei_lesen_beliebig	6dc4654d71c52d35
+1	346	1709899374017694173	CMakeFiles/12_7_datei_lesen_beliebig.dir/main.cpp.o	63878be02d4e7968
+346	403	1709899374073694722	12_7_datei_lesen_beliebig	6dc4654d71c52d35
+0	264	1709900641834237651	CMakeFiles/12_7_datei_lesen_beliebig.dir/main.cpp.o	63878be02d4e7968
+265	309	1709900641878238090	12_7_datei_lesen_beliebig	6dc4654d71c52d35
+0	260	1709900718182996095	CMakeFiles/12_7_datei_lesen_beliebig.dir/main.cpp.o	63878be02d4e7968
+260	305	1709900718226996532	12_7_datei_lesen_beliebig	6dc4654d71c52d35
