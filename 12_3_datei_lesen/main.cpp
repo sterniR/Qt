@@ -26,6 +26,8 @@ int main()
         while(bezeichnung.at(0) == ' ')
             bezeichnung.erase(0,1);
 
-        std::cout << anzahl << " " << preis << " " << " |" << bezeichnung << '\n';
+        std::cout << anzahl << " " << preis << " |" << bezeichnung << '\n';
     }
+
+
 }
