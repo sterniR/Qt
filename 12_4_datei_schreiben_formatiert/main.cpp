@@ -33,7 +33,8 @@ void postenTyp::zeileSchreiben(ofstream& td)
 
 int main()
 {
-    std::ofstream textDatei{"/home/roman/Documents/Qt/datei_schreiben.txt"};
+    //std::ofstream textDatei{"/home/roman/Documents/Qt/datei_schreiben.txt"};
+    std::ofstream textDatei{"C:/Temp/datei_schreiben.txt"};
     if(!textDatei)
     {
         std::cout << "Fehler" << '\n';

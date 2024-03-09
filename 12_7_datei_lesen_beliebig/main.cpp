@@ -9,7 +9,7 @@ private:
     int anzahl;
     double preis;
     std::string bezeichnung;
-    static const int laenge = 34;
+    static const int laenge = 35;
 public:
     postenTyp();
     void zeileLesenNummer(ifstream&, const int&);
@@ -42,7 +42,8 @@ void postenTyp::ausgeben()
 
 int main()
 {
-    std::ifstream textDatei{"/home/roman/Documents/Qt/datei_schreiben.txt"};
+    //std::ifstream textDatei{"/home/roman/Documents/Qt/datei_schreiben.txt"};
+    std::ifstream textDatei{"C:/Temp/datei_schreiben.txt"};
     if(!textDatei)
     {
         std::cout << "Fehler" << '\n';
