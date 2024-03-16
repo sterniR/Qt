@@ -35,7 +35,7 @@ void postenTyp::ausgeben_csv(std::ofstream& td)
 
 int main()
 {
-    std::ofstream textDatei{"C:/Temp/datei_schreiben.csv"};
+    std::ofstream textDatei{"/home/roman/Documents/Qt/datei_schreiben.csv"};
     if(!textDatei)
     {
         std::cout << "error file.\n";
