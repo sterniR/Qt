@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <iomanip>
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -28,15 +29,21 @@ dsatzTyp::dsatzTyp(string n, double z)
     zeit = z;
 }
 
-dsatzTyp::dsatzTyp(string vFeld)
+dsatzTyp::dsatzTyp(string ganzeZeile)
 {
-    std::vector<dsatzTyp> pFeld;
+
+    replace(ganzeZeile.begin(), ganzeZeile.end(), ';', ' ');
+    std::istringstream zeilenStrom(ganzeZeile);
+
+    zeilenStrom >> name;
+
+    zeilenStrom >> zeit;
 
 }
 
 void dsatzTyp::ausgeben()
 {
-    std::cout << name << " " << zeit << '\n';
+    cout << zeit << " sec. " << name << endl;
 }
 
 void dsatzTyp::ausgeben_csv(ofstream& td)
@@ -47,6 +54,14 @@ void dsatzTyp::ausgeben_csv(ofstream& td)
     std::replace(nameX.begin(), nameX.end(), '.', ',');
 
     td << name << ";" << zeit << endl;
+}
+
+bool dsatzTyp::operator> (const dsatzTyp& zeitObjekt)
+{
+    if(zeit > zeitObjekt.zeit)
+        return true;
+    else
+        return false;
 }
 
 int eingabe()
@@ -78,16 +93,11 @@ double differenz(time_point<system_clock> beginn)
 int main()
 {
     int a, b, c, zaehler = 0;
+    float zeitMessung;
     mt19937 z;
     z.seed(system_clock::now().time_since_epoch().count());
     time_point<system_clock> beginn = system_clock::now();
-    std::string nameScore;
-    std::ofstream textDatei{"/home/roman/Documents/Qt/u_zeit_csv.csv"};
-    if(!textDatei)
-    {
-        std::cout << "error file\n";
-        return 1;
-    }
+
 
     for(int i=0; i<5; i++)
     {
@@ -100,17 +110,59 @@ int main()
     }
 
     cout << "Richtig: " << zaehler << " von 5";
-    if(zaehler == 5)
-        cout << " in " << differenz(beginn) << " sec." << endl;
-    else
-        cout << endl;
+    cout << " in " << differenz(beginn)  << " sec." << endl;
+    zeitMessung = differenz(beginn);
 
+    std::string nameScore;
+    std::ofstream textDatei{"/home/roman/Documents/Qt/u_zeit_csv.csv", std::ios::app};
+    if(!textDatei)
+    {
+        std::cout << "error file\n";
+        return 1;
+    }
 
     std::cout << "Name: ";
     std::getline(std::cin, nameScore);
+    dsatzTyp highscoreNeu{nameScore, zeitMessung};
+    highscoreNeu.ausgeben_csv(textDatei);
 
+    std::ifstream textDateiInput{"/home/roman/Documents/Qt/u_zeit_csv.csv"};
+    if(!textDatei)
+    {
+        std::cout << "error file\n";
+        return 1;
+    }
     std::vector<dsatzTyp> pFeld;
-    pFeld.push_back(dsatzTyp{nameScore, differenz(beginn)});
+    while(textDateiInput)
+    {
+        string zeile;
+        getline(textDateiInput, zeile);
+        if(!textDateiInput)
+            break;
+        pFeld.push_back(zeile);
+    }
 
+    bool sortiert;
+    do
+    {
+        sortiert = true;
+        for(int i=0; i<pFeld.size()-1; i++)
+        {
+            if(pFeld.at(i) > pFeld.at(i+1))
+            {
+                sortiert = false;
+                dsatzTyp p = pFeld.at(i);
+                pFeld.at(i) = pFeld.at(i+1);
+                pFeld.at(i+1) = p;
+            }
+        }
+    }
+    while(!sortiert);
 
+    cout << fixed << setprecision(2);
+    std::cout << "Bestzeiten: \n";
+    for(dsatzTyp& p : pFeld)
+    {
+        p.ausgeben();
+    }
 }
