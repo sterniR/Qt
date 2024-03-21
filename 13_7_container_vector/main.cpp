@@ -63,7 +63,7 @@ int main()
     ausgeben(v);
 
     std::vector vd{16,15,14};
-    std::cout << "Deduktion:    ";
+    std::cout << "Deduktion:     ";
     ausgeben(v);
 
 }
