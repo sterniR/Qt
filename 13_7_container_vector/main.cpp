@@ -64,6 +64,6 @@ int main()
 
     std::vector vd{16,15,14};
     std::cout << "Deduktion:     ";
-    ausgeben(v);
+    ausgeben(vd);
 
 }
