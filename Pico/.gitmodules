@@ -1,0 +1,4 @@
+[submodule "sdk"]
+	path = sdk
+	url = https://gitea-bbw.tuxifan.net/Nils/picotamacppi.git
+	branch = scripting

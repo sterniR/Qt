@@ -1,0 +1,4 @@
+# ninja log v5
+0	4	0	clean	7e3281718a1eb00b
+0	90	1711627059154064695	CMakeFiles/Pico.dir/main.cpp.o	d206d6ebaaca5e77
+90	183	1711627059258064587	Pico.wasm	efa0031ce816edf0

@@ -1,0 +1,7 @@
+/home/roman/Documents/Qt/build-Pico-Clang-Release/CMakeFiles/Pico.dir
+/home/roman/Documents/Qt/build-Pico-Clang-Release/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/build-Pico-Clang-Release/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/build-Pico-Clang-Release/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/build-Pico-Clang-Release/CMakeFiles/install.dir
+/home/roman/Documents/Qt/build-Pico-Clang-Release/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/build-Pico-Clang-Release/CMakeFiles/install/strip.dir
