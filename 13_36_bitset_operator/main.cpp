@@ -33,6 +33,6 @@ int main()
     e = b ^ d;
     cout << "b ^ d     " << e << endl;
 
-    e = b;
+    e = ~b;
     cout << "~b        " << e << endl;
 }
