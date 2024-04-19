@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 cmake_minimum_required(VERSION 3.5)
 
 project(13_33_mengenlehre LANGUAGES CXX)
@@ -12,3 +13,16 @@ install(TARGETS 13_33_mengenlehre
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+=======
+cmake_minimum_required(VERSION 3.5)
+
+project(13_33_mengenlehre LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(13_33_mengenlehre main.cpp)
+
+install(TARGETS 13_33_mengenlehre
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+>>>>>>> c1964a8aff16446b735f13ab625f643551a89f49
