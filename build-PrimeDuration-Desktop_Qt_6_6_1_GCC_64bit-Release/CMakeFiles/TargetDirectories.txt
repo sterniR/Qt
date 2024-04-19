@@ -1,0 +1,7 @@
+/home/roman/Documents/Qt/build-PrimeDuration-Desktop_Qt_6_6_1_GCC_64bit-Release/CMakeFiles/PrimeDuration.dir
+/home/roman/Documents/Qt/build-PrimeDuration-Desktop_Qt_6_6_1_GCC_64bit-Release/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/build-PrimeDuration-Desktop_Qt_6_6_1_GCC_64bit-Release/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/build-PrimeDuration-Desktop_Qt_6_6_1_GCC_64bit-Release/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/build-PrimeDuration-Desktop_Qt_6_6_1_GCC_64bit-Release/CMakeFiles/install.dir
+/home/roman/Documents/Qt/build-PrimeDuration-Desktop_Qt_6_6_1_GCC_64bit-Release/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/build-PrimeDuration-Desktop_Qt_6_6_1_GCC_64bit-Release/CMakeFiles/install/strip.dir

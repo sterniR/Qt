@@ -45,4 +45,32 @@ int main()
 
     std::cout << "count_if():   " <<
         count_if(v.begin(), v.end(),[](int z){return z % 2 == 0;}) << '\n';
+
+    replace(v.begin(), v.end(), 27, 47);
+    std::cout << "replace():    ";
+    ausgeben(v);
+
+    rotate(v.begin(), v.begin() + 2, v.end());
+    std::cout << "rotate():     ";
+    ausgeben(v);
+
+    std::mt19937 gene;
+    gene.seed(std::chrono::system_clock::now().time_since_epoch().count());
+    shuffle(v.begin(), v.end(), gene);
+    std::cout << "shuffle():    ";
+    ausgeben(v);
+
+    sort(v.begin(), v.end());
+    std::cout << "sort():       ";
+    ausgeben(v);
+
+    sort(v.begin(), v.end(), [](int a, int b){return a + b;});
+    std::cout << "sort():       ";
+    ausgeben(v);
+
+    std::vector<int> vZwei{1005, 1020, 1012};
+    swap(v, vZwei);
+    std::cout << "swap():       ";
+    ausgeben(v);
+
 }
