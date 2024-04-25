@@ -1,0 +1,7 @@
+/home/roman/Documents/Qt/15_2_pre_include/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/15_2_pre_include.dir
+/home/roman/Documents/Qt/15_2_pre_include/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/15_2_pre_include/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/15_2_pre_include/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/15_2_pre_include/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/install.dir
+/home/roman/Documents/Qt/15_2_pre_include/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/15_2_pre_include/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/install/strip.dir
