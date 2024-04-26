@@ -1,0 +1,9 @@
+# ninja log v5
+0	257	1714123603960537956	abc_autogen/timestamp	529cc610f223f19d
+0	257	1714123603960537956	abc_autogen/mocs_compilation.cpp	529cc610f223f19d
+0	257	1714123603960537956	/home/roman/Documents/Qt/abc/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/abc_autogen/timestamp	529cc610f223f19d
+0	257	1714123603960537956	/home/roman/Documents/Qt/abc/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/abc_autogen/mocs_compilation.cpp	529cc610f223f19d
+257	1803	1714123605508545112	CMakeFiles/abc.dir/abc_autogen/mocs_compilation.cpp.o	f8f37f562c6d1074
+258	1812	1714123605516545149	CMakeFiles/abc.dir/main.cpp.o	b731a8cb20816800
+258	1842	1714123605544545278	CMakeFiles/abc.dir/mainwindow.cpp.o	c49100e0eac14429
+1843	2138	1714123605840546646	abc	b5b765e46c98815a

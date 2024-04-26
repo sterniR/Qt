@@ -1,0 +1,15 @@
+# ninja log v5
+0	224	1714126699416795195	MainWindow_autogen/timestamp	d0d4ed75874664df
+0	224	1714126699416795195	MainWindow_autogen/mocs_compilation.cpp	d0d4ed75874664df
+0	224	1714126699416795195	/home/roman/Documents/Qt/MainWindow/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/MainWindow_autogen/timestamp	d0d4ed75874664df
+0	224	1714126699416795195	/home/roman/Documents/Qt/MainWindow/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/MainWindow_autogen/mocs_compilation.cpp	d0d4ed75874664df
+225	1874	1714126701072800714	CMakeFiles/MainWindow.dir/MainWindow_autogen/mocs_compilation.cpp.o	7e71cbb079e86adb
+225	1911	1714126701108800834	CMakeFiles/MainWindow.dir/main.cpp.o	daff10075261daaa
+225	1983	1714126701180801075	CMakeFiles/MainWindow.dir/mainwindow.cpp.o	bb8b178a6d7a4b8
+1984	2247	1714126701444801954	MainWindow	a5ac1eb45409b5dd
+2	17	1714126721308868230	MainWindow_autogen/timestamp	d0d4ed75874664df
+2	17	1714126721308868230	MainWindow_autogen/mocs_compilation.cpp	d0d4ed75874664df
+2	17	1714126721308868230	/home/roman/Documents/Qt/MainWindow/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/MainWindow_autogen/timestamp	d0d4ed75874664df
+2	17	1714126721308868230	/home/roman/Documents/Qt/MainWindow/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/MainWindow_autogen/mocs_compilation.cpp	d0d4ed75874664df
+18	1544	1714126722832873322	CMakeFiles/MainWindow.dir/mainwindow.cpp.o	bb8b178a6d7a4b8
+1544	1794	1714126723080874150	MainWindow	a5ac1eb45409b5dd
