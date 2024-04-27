@@ -7,6 +7,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     connect(ui->CmdHallo, SIGNAL(clicked()), SLOT(CmdHalloClicked()) );
+    //Methode
+
+
 }
 
 MainWindow::~MainWindow()

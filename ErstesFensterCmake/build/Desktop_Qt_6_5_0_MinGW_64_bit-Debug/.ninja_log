@@ -1,0 +1,15 @@
+# ninja log v5
+0	440	7359168947309330	ErstesFensterCmake_autogen/timestamp	613d98f2b34fe541
+0	440	7359168947309330	ErstesFensterCmake_autogen/mocs_compilation.cpp	613d98f2b34fe541
+0	440	7359168947309330	C:/Qt/Projects/Qt/ErstesFensterCmake/build/Desktop_Qt_6_5_0_MinGW_64_bit-Debug/ErstesFensterCmake_autogen/timestamp	613d98f2b34fe541
+0	440	7359168947309330	C:/Qt/Projects/Qt/ErstesFensterCmake/build/Desktop_Qt_6_5_0_MinGW_64_bit-Debug/ErstesFensterCmake_autogen/mocs_compilation.cpp	613d98f2b34fe541
+440	1575	7359168958980275	CMakeFiles/ErstesFensterCmake.dir/ErstesFensterCmake_autogen/mocs_compilation.cpp.obj	ce3d1aba7c5cb1b3
+443	1579	7359168959010296	CMakeFiles/ErstesFensterCmake.dir/main.cpp.obj	93411ac88d3396f1
+442	1604	7359168959270268	CMakeFiles/ErstesFensterCmake.dir/mainwindow.cpp.obj	ae2cc5a46f8dd559
+1605	1788	7359168961079379	ErstesFensterCmake.exe	71e777153d546910
+15	108	7359171890572325	ErstesFensterCmake_autogen/timestamp	613d98f2b34fe541
+15	108	7359171890572325	ErstesFensterCmake_autogen/mocs_compilation.cpp	613d98f2b34fe541
+15	108	7359171890572325	C:/Qt/Projects/Qt/ErstesFensterCmake/build/Desktop_Qt_6_5_0_MinGW_64_bit-Debug/ErstesFensterCmake_autogen/timestamp	613d98f2b34fe541
+15	108	7359171890572325	C:/Qt/Projects/Qt/ErstesFensterCmake/build/Desktop_Qt_6_5_0_MinGW_64_bit-Debug/ErstesFensterCmake_autogen/mocs_compilation.cpp	613d98f2b34fe541
+114	1177	7359171901262917	CMakeFiles/ErstesFensterCmake.dir/mainwindow.cpp.obj	ae2cc5a46f8dd559
+1177	1287	7359171902340533	ErstesFensterCmake.exe	71e777153d546910

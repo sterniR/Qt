@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-55ebb536d4348ec0e8ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ErstesFensterCmake",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ErstesFensterCmake::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ErstesFensterCmake-Debug-5d144362b7763b5300ac.json",
+					"name" : "ErstesFensterCmake",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ErstesFensterCmake_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ErstesFensterCmake_autogen-Debug-d30d35458eda88577fea.json",
+					"name" : "ErstesFensterCmake_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ErstesFensterCmake_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ErstesFensterCmake_autogen_timestamp_deps-Debug-18da0f827833b55a94c2.json",
+					"name" : "ErstesFensterCmake_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Qt/Projects/Qt/ErstesFensterCmake/build/Desktop_Qt_6_5_0_MinGW_64_bit-Debug",
+		"source" : "C:/Qt/Projects/Qt/ErstesFensterCmake"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
