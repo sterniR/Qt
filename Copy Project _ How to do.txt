@@ -1,0 +1,5 @@
+- Copy and Paste Project (cmake not qmake)
+- delete build file
+- replace all "project_name_old" to "project_name_new" in CMakeLists.txt and CMakeLists.txt.user 
+- open project/CMakeLists.txt from the copied project
+- Done!
