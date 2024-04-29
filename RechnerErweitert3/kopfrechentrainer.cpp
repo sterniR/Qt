@@ -7,7 +7,14 @@ Kopfrechentrainer::Kopfrechentrainer(QWidget *parent)
     , ui(new Ui::Kopfrechentrainer)
 {
     ui->setupUi(this);
+
     std::srand((unsigned)time(nullptr));
+    ergebnis = -1;
+
+    ui->LstOperation->addItem("Nur Addition");
+    ui->LstOperation->addItem("Nur Subtraktion");
+    ui->LstOperation->addItem("Addition oder Subtraktion");
+
     connect(ui->CmdPruefenNeu, SIGNAL(clicked()), SLOT(CmdPruefenNeuClicked()));  //Die Methode "connect()" wird aufgerufen.
     connect(ui->CmdEnde, SIGNAL(clicked()), SLOT(close()));                     //Die Methode "connect()" wird aufgerufen.
 }

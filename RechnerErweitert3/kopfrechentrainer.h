@@ -20,6 +20,7 @@ public:
 private:
     Ui::Kopfrechentrainer *ui;
     int a, b, ergebnis;
+    QString operation;
 private slots:
     void CmdPruefenNeuClicked();
 };

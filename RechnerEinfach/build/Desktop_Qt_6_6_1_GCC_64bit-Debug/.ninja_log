@@ -1,0 +1,10 @@
+# ninja log v5
+4	93	0	/home/roman/Documents/Qt/RechnerEinfach/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/cmake.verify_globs	30333ef0b21a2c33
+0	211	1714397069139227548	RechnerEinfach_autogen/timestamp	47ad608a17d26f5e
+0	211	1714397069139227548	RechnerEinfach_autogen/mocs_compilation.cpp	47ad608a17d26f5e
+0	211	1714397069139227548	/home/roman/Documents/Qt/RechnerEinfach/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/RechnerEinfach_autogen/timestamp	47ad608a17d26f5e
+0	211	1714397069139227548	/home/roman/Documents/Qt/RechnerEinfach/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/RechnerEinfach_autogen/mocs_compilation.cpp	47ad608a17d26f5e
+212	1986	1714397070919231884	CMakeFiles/RechnerEinfach.dir/RechnerEinfach_autogen/mocs_compilation.cpp.o	56547093e9f32fb8
+212	2248	1714397071179232518	CMakeFiles/RechnerEinfach.dir/main.cpp.o	be90e43c4ab1fa9e
+212	2491	1714397071423233113	CMakeFiles/RechnerEinfach.dir/kopfrechentrainer.cpp.o	850532272932fe9b
+2491	2783	1714397071711233815	RechnerEinfach	332ac9d8dc925f85

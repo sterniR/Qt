@@ -1,0 +1,18 @@
+# ninja log v5
+193	1884	1714388531071917176	CMakeFiles/RechnerErweitert3.dir/kopfrechentrainer.cpp.o	d3573d1a03602a7b
+0	192	1714388529375915615	RechnerErweitert3_autogen/mocs_compilation.cpp	29afaa30a2b75446
+1884	2209	1714388531395917446	RechnerErweitert3	bb7bdd4f81735738
+193	1736	1714388530923917048	CMakeFiles/RechnerErweitert3.dir/main.cpp.o	4d0d62a3ce85f131
+1	80	1714388544779923432	/home/roman/Documents/Qt/RechnerErweitert3/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/cmake.verify_globs	a557eb12ae575492
+0	192	1714388529375915615	/home/roman/Documents/Qt/RechnerErweitert3/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/RechnerErweitert3_autogen/timestamp	29afaa30a2b75446
+192	1703	1714388530887917015	CMakeFiles/RechnerErweitert3.dir/RechnerErweitert3_autogen/mocs_compilation.cpp.o	281face6aa9fcf86
+0	192	1714388529375915615	/home/roman/Documents/Qt/RechnerErweitert3/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/RechnerErweitert3_autogen/mocs_compilation.cpp	29afaa30a2b75446
+0	192	1714388529375915615	RechnerErweitert3_autogen/timestamp	29afaa30a2b75446
+80	331	1714388545059923456	build.ninja	da6d161e3eb070a5
+0	73	0	/home/roman/Documents/Qt/RechnerErweitert3/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/CMakeFiles/cmake.verify_globs	a557eb12ae575492
+2	15	1714388545163923460	RechnerErweitert3_autogen/timestamp	29afaa30a2b75446
+2	15	1714388545163923460	RechnerErweitert3_autogen/mocs_compilation.cpp	29afaa30a2b75446
+2	15	1714388545163923460	/home/roman/Documents/Qt/RechnerErweitert3/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/RechnerErweitert3_autogen/timestamp	29afaa30a2b75446
+2	15	1714388545163923460	/home/roman/Documents/Qt/RechnerErweitert3/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/RechnerErweitert3_autogen/mocs_compilation.cpp	29afaa30a2b75446
+16	1598	1714388546743923489	CMakeFiles/RechnerErweitert3.dir/kopfrechentrainer.cpp.o	d3573d1a03602a7b
+1598	1848	1714388546995923487	RechnerErweitert3	bb7bdd4f81735738
