@@ -17,24 +17,37 @@
    <widget class="QListWidget" name="LstAusgabe">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>20</x>
       <y>110</y>
-      <width>256</width>
+      <width>411</width>
       <height>192</height>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="CmdEinfuegen">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>60</y>
-      <width>80</width>
+      <x>19</x>
+      <y>30</y>
+      <width>411</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
      <string>Einfügen</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CmdAnzeigenAlle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>411</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alle Datensätze und Felder anzeigen</string>
     </property>
    </widget>
   </widget>

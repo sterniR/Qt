@@ -25,5 +25,7 @@ private:
 private slots:
     void CmdEinfuegenClicked();
     void FehlerAnzeige();
+    void CmdAnzeigenAlleClicked();
+    void Ausgabe(int);
 };
 #endif // MAINWINDOW_H
