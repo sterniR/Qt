@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>151</y>
       <width>411</width>
-      <height>192</height>
+      <height>151</height>
      </rect>
     </property>
    </widget>
@@ -50,6 +50,19 @@
      <string>Alle Datensätze und Felder anzeigen</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="CmdAuswaehlen">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>411</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -57,7 +70,7 @@
      <x>0</x>
      <y>0</y>
      <width>453</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

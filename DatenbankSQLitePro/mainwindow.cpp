@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->CmdEinfuegen, SIGNAL(clicked()), SLOT(CmdEinfuegenClicked()));
     connect(ui->CmdAnzeigenAlle, SIGNAL(clicked()), SLOT(CmdAnzeigenAlleClicked()));
+    connect(ui->CmdAuswaehlen, SIGNAL(clicked()), SLOT(CmdAuswaehlenClicked()));
 }
 
 void MainWindow::CmdEinfuegenClicked()
@@ -39,8 +40,7 @@ void MainWindow::CmdEinfuegenClicked()
                    "'Schmitz', 'Almut', 81343, 3750, '12.04.1958')");
     FehlerAnzeige();
 
-    sqlBefehl.exec("INSERT INTO personen VALUES"
-                   "('Günter', 'Manfred', 4352, 3200, '19.03.2000')");
+    sqlBefehl.exec("INSERT INTO personen VALUES ('Günter', 'Manfred', 4352, 3200, '19.03.2000')");
     FehlerAnzeige();
 }
 void MainWindow::FehlerAnzeige()
@@ -65,11 +65,18 @@ void MainWindow::Ausgabe(int feldAnzahl)
     {
         ausgabe = "";
         for(int i=0; i<feldAnzahl; i++)
-            ausgabe += sqlBefehl.value(i).toString() + " # ";
+            ausgabe += sqlBefehl.value(i).toString() + " | ";
         ui->LstAusgabe->addItem(ausgabe);
     }
 }
 
+void MainWindow::CmdAuswaehlenClicked()
+{
+    ui->LstAusgabe->clear();
+    sqlBefehl.exec("SELECT * FROM personen WHERE name LIKE 'M__er'");
+    FehlerAnzeige();
+    Ausgabe(5);
+}
 MainWindow::~MainWindow()
 {
     con.close();
