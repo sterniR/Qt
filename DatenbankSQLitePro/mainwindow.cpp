@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->CmdEinfuegen, SIGNAL(clicked()), SLOT(CmdEinfuegenClicked()));
     connect(ui->CmdAnzeigenAlle, SIGNAL(clicked()), SLOT(CmdAnzeigenAlleClicked()));
     connect(ui->CmdAuswaehlen, SIGNAL(clicked()), SLOT(CmdAuswaehlenClicked()));
+    connect(ui->CmdEingabe, SIGNAL(clicked()), SLOT(CmdEingabeClicked()));
+
 }
 
 void MainWindow::CmdEinfuegenClicked()
@@ -41,6 +43,8 @@ void MainWindow::CmdEinfuegenClicked()
     FehlerAnzeige();
 
     sqlBefehl.exec("INSERT INTO personen VALUES ('Günter', 'Manfred', 4352, 3200, '19.03.2000')");
+    FehlerAnzeige();
+    sqlBefehl.exec("INSERT INTO personen VALUES ('Günter', 'Manfred', 4351, 3200, '19.03.2000')");
     FehlerAnzeige();
 }
 void MainWindow::FehlerAnzeige()
@@ -73,10 +77,22 @@ void MainWindow::Ausgabe(int feldAnzahl)
 void MainWindow::CmdAuswaehlenClicked()
 {
     ui->LstAusgabe->clear();
-    sqlBefehl.exec("SELECT * FROM personen WHERE name LIKE 'M__er'");
+    sqlBefehl.exec("SELECT * FROM personen ORDER BY gehalt DESC");
     FehlerAnzeige();
     Ausgabe(5);
 }
+
+void MainWindow::CmdEingabeClicked()
+{
+    ui->LstAusgabe->clear();
+    sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE ?");
+    sqlBefehl.addBindValue("%" + ui->EdtEingabe->text() + "%");
+    sqlBefehl.exec();
+    FehlerAnzeige();
+    Ausgabe(5);
+}
+
+
 MainWindow::~MainWindow()
 {
     con.close();

@@ -28,5 +28,6 @@ private slots:
     void CmdAnzeigenAlleClicked();
     void Ausgabe(int);
     void CmdAuswaehlenClicked();
+    void CmdEingabeClicked();
 };
 #endif // MAINWINDOW_H
