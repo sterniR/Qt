@@ -1,0 +1,15 @@
+# ninja log v5
+1	704	7371077555806670	testCMAKESQLite_autogen/timestamp	9f76ff1e6e3f1831
+1	704	7371077555806670	testCMAKESQLite_autogen/mocs_compilation.cpp	9f76ff1e6e3f1831
+1	704	7371077555806670	C:/Qt/Projects/Qt/testCMAKESQLite/build/Desktop_Qt_6_5_0_MinGW_64_bit-Release/testCMAKESQLite_autogen/timestamp	9f76ff1e6e3f1831
+1	704	7371077555806670	C:/Qt/Projects/Qt/testCMAKESQLite/build/Desktop_Qt_6_5_0_MinGW_64_bit-Release/testCMAKESQLite_autogen/mocs_compilation.cpp	9f76ff1e6e3f1831
+708	2812	7371077577242960	CMakeFiles/testCMAKESQLite.dir/main.cpp.obj	6b6df140bb17bf30
+705	2836	7371077577492959	CMakeFiles/testCMAKESQLite.dir/testCMAKESQLite_autogen/mocs_compilation.cpp.obj	ad42cc8bc36a00f
+707	3106	7371077580192955	CMakeFiles/testCMAKESQLite.dir/mainwindow.cpp.obj	909df39f587cd872
+3107	3194	7371077581032959	testCMAKESQLite.exe	78f706d934e16467
+11	136	7371078191226725	testCMAKESQLite_autogen/timestamp	9f76ff1e6e3f1831
+11	136	7371078191226725	testCMAKESQLite_autogen/mocs_compilation.cpp	9f76ff1e6e3f1831
+11	136	7371078191226725	C:/Qt/Projects/Qt/testCMAKESQLite/build/Desktop_Qt_6_5_0_MinGW_64_bit-Release/testCMAKESQLite_autogen/timestamp	9f76ff1e6e3f1831
+11	136	7371078191226725	C:/Qt/Projects/Qt/testCMAKESQLite/build/Desktop_Qt_6_5_0_MinGW_64_bit-Release/testCMAKESQLite_autogen/mocs_compilation.cpp	9f76ff1e6e3f1831
+149	3090	7371078220828120	CMakeFiles/testCMAKESQLite.dir/mainwindow.cpp.obj	909df39f587cd872
+3090	3183	7371078221718132	testCMAKESQLite.exe	78f706d934e16467

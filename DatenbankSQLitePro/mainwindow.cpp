@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->CmdAnzeigenAlle, SIGNAL(clicked()), SLOT(CmdAnzeigenAlleClicked()));
     connect(ui->CmdAuswaehlen, SIGNAL(clicked()), SLOT(CmdAuswaehlenClicked()));
     connect(ui->CmdEingabe, SIGNAL(clicked()), SLOT(CmdEingabeClicked()));
-
+    connect(ui->CmdAktion, SIGNAL(clicked()), SLOT(CmdAktionClicked()));
 }
 
 void MainWindow::CmdEinfuegenClicked()
@@ -41,10 +41,11 @@ void MainWindow::CmdEinfuegenClicked()
     sqlBefehl.exec("INSERT INTO personen VALUES("
                    "'Schmitz', 'Almut', 81343, 3750, '12.04.1958')");
     FehlerAnzeige();
+    sqlBefehl.exec("INSERT INTO personen VALUES("
+                   "'Schmitz', 'Blmut', 5, 3750, '12.04.1958')");
+    FehlerAnzeige();
 
     sqlBefehl.exec("INSERT INTO personen VALUES ('Günter', 'Manfred', 4352, 3200, '19.03.2000')");
-    FehlerAnzeige();
-    sqlBefehl.exec("INSERT INTO personen VALUES ('Günter', 'Manfred', 4351, 3200, '19.03.2000')");
     FehlerAnzeige();
 }
 void MainWindow::FehlerAnzeige()
@@ -77,7 +78,7 @@ void MainWindow::Ausgabe(int feldAnzahl)
 void MainWindow::CmdAuswaehlenClicked()
 {
     ui->LstAusgabe->clear();
-    sqlBefehl.exec("SELECT * FROM personen ORDER BY gehalt DESC");
+    sqlBefehl.exec("SELECT * FROM personen WHERE name LIKE 'Schmitz' ORDER BY name, vorname");
     FehlerAnzeige();
     Ausgabe(5);
 }
@@ -92,6 +93,13 @@ void MainWindow::CmdEingabeClicked()
     Ausgabe(5);
 }
 
+void MainWindow::CmdAktionClicked()
+{
+    ui->LstAusgabe->clear();
+    sqlBefehl.exec("DELETE FROM personen");
+    FehlerAnzeige();
+    ui->LstAusgabe->addItem(QString("Betroffen: %1").arg(sqlBefehl.numRowsAffected()));
+}
 
 MainWindow::~MainWindow()
 {
