@@ -1,16 +1,14 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
+    , ui(new Ui::MainWindow) {
     ui->setupUi(this);
 
     con = QSqlDatabase::addDatabase("QSQLITE");
     con.setDatabaseName("firma.db");
-    if(!con.open())
-    {
+    if (!con.open()) {
         ui->ListAusgabe->addItem("DB Nicht gefunden.");
     }
 
@@ -22,12 +20,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButtonLoeschen, SIGNAL(clicked()), SLOT(pushButtonLoeschenClicked()));
     connect(ui->pushButtonFiltern, SIGNAL(clicked()), SLOT(pushButtonFilternClicked()));
     connect(ui->ListAusgabe, SIGNAL(itemClicked(QListWidgetItem*)), SLOT(ListAusgabeClicked()));
-
 }
 
-void MainWindow::ListAusgabeClicked()
-{
-
+void MainWindow::ListAusgabeClicked() {
     ui->lineEditName->clear();
     ui->lineEditNachanme->clear();
     ui->lineEditPersonalnummer->clear();
@@ -46,44 +41,36 @@ void MainWindow::ListAusgabeClicked()
     ui->lineEditPersonalnummer->insert(feldwertPersonalnummer);
     ui->lineEditGehalt->insert(feldwertGehalt);
     ui->InputDateEdit->setDate(QDate::fromString(feldwertGeburtstag, "dd.MM.yyyy"));
-
-
 }
 
-void MainWindow::FehlerAnzeigen()
-{
+void MainWindow::FehlerAnzeigen() {
     QSqlError fehler = sqlBefehl.lastError();
     QString error = fehler.text();
     error.push_front("Fehler: ");
-    if(fehler.isValid())
-    {
+    if (fehler.isValid()) {
         box.setText(error);
         box.exec();
     }
 }
 
-void MainWindow::Ausgabe(int anzahl)
-{
+void MainWindow::Ausgabe(int anzahl) {
     QString ausgabe;
-    while(sqlBefehl.next())
-    {
+    while (sqlBefehl.next()) {
         ausgabe = "";
-        for(int i=0; i<anzahl; i++)
+        for (int i = 0; i < anzahl; i++)
             ausgabe += sqlBefehl.value(i).toString() + " | ";
         ui->ListAusgabe->addItem(ausgabe);
     }
 }
 
-void MainWindow::pushButtonAlleAnsehenClicked()
-{
+void MainWindow::pushButtonAlleAnsehenClicked() {
     ui->ListAusgabe->clear();
     sqlBefehl.exec("SELECT * FROM personen");
     FehlerAnzeigen();
     Ausgabe(5);
 }
 
-void MainWindow::pushButtonEinfuegenClicked()
-{
+void MainWindow::pushButtonEinfuegenClicked() {
     ui->ListAusgabe->clear();
 
     sqlBefehl.exec("CREATE TABLE personen"
@@ -105,9 +92,11 @@ void MainWindow::pushButtonEinfuegenClicked()
                    "('Peter', 'Schmitz', 81343, 3750, '12.04.1958')");
     FehlerAnzeigen();*/
 
-    if(ui->lineEditPersonalnummer->text() != "")
-    {
-        sqlBefehl.prepare("INSERT INTO personen VALUES ('" + ui->lineEditName->text() + "', '" + ui->lineEditNachanme->text() + "', " + ui->lineEditPersonalnummer->text() + ", " + ui->lineEditGehalt->text() + ", '" + ui->InputDateEdit->text() + "')");
+    if (ui->lineEditPersonalnummer->text() != "") {
+        sqlBefehl.prepare("INSERT INTO personen VALUES ('" + ui->lineEditName->text() + "', '"
+                          + ui->lineEditNachanme->text() + "', "
+                          + ui->lineEditPersonalnummer->text() + ", " + ui->lineEditGehalt->text()
+                          + ", '" + ui->InputDateEdit->text() + "')");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
@@ -115,52 +104,53 @@ void MainWindow::pushButtonEinfuegenClicked()
         sqlBefehl.exec("SELECT * FROM personen");
         FehlerAnzeigen();
         Ausgabe(5);
-    }
-    else
-    {
+    } else {
         box.setText("Personalnummer darf nicht leer sein.");
         box.exec();
     }
 }
 
-void MainWindow::pushButtonAendernClicked()
-{
-    bool selected = ui->ListAusgabe->currentItem()->isSelected() ? true : false;
+void MainWindow::pushButtonAendernClicked() {
+    // bool selected = ui->ListAusgabe->currentItem() != nullptr;
 
-    if(selected == false)
-    {
+    if (ui->ListAusgabe->currentItem() == nullptr) {
         box.setText("Zur Veränderung muss die jeweilige Reihe ausgewählt sein.");
         box.exec();
-
+        return;
     }
-    else
-    {
-        QString datensatz = ui->ListAusgabe->currentItem()->text();
-        QStringList liste = datensatz.split("|");
-        QString feldwertPersonalnummer = liste.at(2).trimmed();
-        sqlBefehl.exec("UPDATE personen SET name = '"           + ui->lineEditName->text() +            "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
-        sqlBefehl.exec("UPDATE personen SET nachname = '"       + ui->lineEditNachanme->text() +        "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
-        sqlBefehl.exec("UPDATE personen SET personalnummer = '" + ui->lineEditPersonalnummer->text() +  "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
-        sqlBefehl.exec("UPDATE personen SET gehalt = '"         + ui->lineEditGehalt->text() +          "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
-        sqlBefehl.exec("UPDATE personen SET geburtstag = '"     + ui->InputDateEdit->text() +           "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
+    QString datensatz = ui->ListAusgabe->currentItem()->text();
+    QStringList liste = datensatz.split("|");
+    QString feldwertPersonalnummer = liste.at(2).trimmed();
+    sqlBefehl.exec("UPDATE personen SET name = '" + ui->lineEditName->text()
+                   + "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
+    sqlBefehl.exec("UPDATE personen SET nachname = '" + ui->lineEditNachanme->text()
+                   + "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
+    sqlBefehl.exec("UPDATE personen SET personalnummer = '" + ui->lineEditPersonalnummer->text()
+                   + "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
+    sqlBefehl.exec("UPDATE personen SET gehalt = '" + ui->lineEditGehalt->text()
+                   + "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
+    sqlBefehl.exec("UPDATE personen SET geburtstag = '" + ui->InputDateEdit->text()
+                   + "' WHERE personalnummer = '" + feldwertPersonalnummer + "'");
 
-        ui->ListAusgabe->clear();
-        ui->lineEditName->clear();
-        ui->lineEditNachanme->clear();
-        ui->lineEditPersonalnummer->clear();
-        ui->lineEditGehalt->clear();
-        ui->InputDateEdit->clear();
-        FehlerAnzeigen();
+    ui->ListAusgabe->clear();
+    ui->lineEditName->clear();
+    ui->lineEditNachanme->clear();
+    ui->lineEditPersonalnummer->clear();
+    ui->lineEditGehalt->clear();
+    ui->InputDateEdit->clear();
+    FehlerAnzeigen();
 
-        sqlBefehl.exec("SELECT * FROM personen");
-        FehlerAnzeigen();
-        Ausgabe(5);
-    }
-
+    sqlBefehl.exec("SELECT * FROM personen");
+    FehlerAnzeigen();
+    Ausgabe(5);
 }
 
-void MainWindow::pushButtonLoeschenClicked()
-{
+void MainWindow::pushButtonLoeschenClicked() {
+    if (ui->ListAusgabe->currentItem() == nullptr) {
+        box.setText("Zur Veränderung muss die jeweilige Reihe ausgewählt sein.");
+        box.exec();
+        return;
+    }
     QString datensatz = ui->ListAusgabe->currentItem()->text();
     QStringList liste = datensatz.split("|");
     QString feldwertPersonalnummer = liste.at(2).trimmed();
@@ -179,156 +169,185 @@ void MainWindow::pushButtonLoeschenClicked()
     Ausgabe(5);
 }
 
-void MainWindow::pushButtonFilternClicked()
-{
+void MainWindow::pushButtonFilternClicked() {
     ui->ListAusgabe->clear();
-    //Ein Feld ausgefüllt
-    if(ui->lineEditName->text() != "" )
-    {
+    /*Ein Feld ausgefüllt
+    if (ui->lineEditName->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text() + "%'");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text()
+                          + "%'");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditNachanme->text() != "" )
-    {
+    if (ui->lineEditNachanme->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE nachname LIKE '%" + ui->lineEditNachanme->text() + "%'");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE nachname LIKE '%"
+                          + ui->lineEditNachanme->text() + "%'");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditPersonalnummer->text() != "" )
-    {
+    if (ui->lineEditPersonalnummer->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE personalnummer = '" + ui->lineEditPersonalnummer->text() + "'");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE personalnummer = '"
+                          + ui->lineEditPersonalnummer->text() + "'");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditGehalt->text() != "" )
-    {
+    if (ui->lineEditGehalt->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE gehalt >= '" + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE gehalt >= '" + ui->lineEditGehalt->text()
+                          + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
 
     //Zwei Felder ausgefüllt
-    if(ui->lineEditName->text() != "" && ui->lineEditNachanme->text() != "")
-    {
+    if (ui->lineEditName->text() != "" && ui->lineEditNachanme->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text() + "%' AND nachname LIKE '%" + ui->lineEditNachanme->text() + "%'");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text()
+                          + "%' AND nachname LIKE '%" + ui->lineEditNachanme->text() + "%'");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditName->text() != "" && ui->lineEditPersonalnummer->text() != "")
-    {
+    if (ui->lineEditName->text() != "" && ui->lineEditPersonalnummer->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text() + "%' AND personalnummer = '" + ui->lineEditPersonalnummer->text() + "'");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text()
+                          + "%' AND personalnummer = '" + ui->lineEditPersonalnummer->text() + "'");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditName->text() != "" && ui->lineEditGehalt->text() != "")
-    {
+    if (ui->lineEditName->text() != "" && ui->lineEditGehalt->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text() + "%' AND gehalt >= '" + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text()
+                          + "%' AND gehalt >= '" + ui->lineEditGehalt->text()
+                          + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditPersonalnummer->text() != "" && ui->lineEditGehalt->text() != "")
-    {
+    if (ui->lineEditPersonalnummer->text() != "" && ui->lineEditGehalt->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE personalnummer = '" + ui->lineEditPersonalnummer->text() + "' AND gehalt >= '" + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE personalnummer = '"
+                          + ui->lineEditPersonalnummer->text() + "' AND gehalt >= '"
+                          + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '"
+                          + ui->lineEditGehalt->text() + "' * 1.1");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditNachanme->text() != "" && ui->lineEditPersonalnummer->text() != "")
-    {
+    if (ui->lineEditNachanme->text() != "" && ui->lineEditPersonalnummer->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE nachname LIKE '%" + ui->lineEditNachanme->text() + "%' AND personalnummer = '" + ui->lineEditPersonalnummer->text() + "'");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE nachname LIKE '%"
+                          + ui->lineEditNachanme->text() + "%' AND personalnummer = '"
+                          + ui->lineEditPersonalnummer->text() + "'");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditNachanme->text() != "" && ui->lineEditGehalt->text() != "")
-    {
+    if (ui->lineEditNachanme->text() != "" && ui->lineEditGehalt->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE nachname = '" + ui->lineEditNachanme->text() + "' AND gehalt >= '" + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE nachname = '" + ui->lineEditNachanme->text()
+                          + "' AND gehalt >= '" + ui->lineEditGehalt->text()
+                          + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
 
     //Drei Felder ausgefüllt
-    if(ui->lineEditName->text() != "" && ui->lineEditNachanme->text() != "" && ui->lineEditPersonalnummer->text() != "")
-    {
+    if (ui->lineEditName->text() != "" && ui->lineEditNachanme->text() != ""
+        && ui->lineEditPersonalnummer->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text() + "%' AND nachname LIKE '%" + ui->lineEditNachanme->text() + "%' AND personalnummer = '" + ui->lineEditPersonalnummer->text() + "'");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text()
+                          + "%' AND nachname LIKE '%" + ui->lineEditNachanme->text()
+                          + "%' AND personalnummer = '" + ui->lineEditPersonalnummer->text() + "'");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditName->text() != "" && ui->lineEditNachanme->text() != "" && ui->lineEditGehalt->text() != "")
-    {
+    if (ui->lineEditName->text() != "" && ui->lineEditNachanme->text() != ""
+        && ui->lineEditGehalt->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text() + "%' AND nachname LIKE '%" + ui->lineEditNachanme->text() + "%' AND gehalt >= '" + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text()
+                          + "%' AND nachname LIKE '%" + ui->lineEditNachanme->text()
+                          + "%' AND gehalt >= '" + ui->lineEditGehalt->text()
+                          + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditName->text() != "" && ui->lineEditPersonalnummer->text() != "" && ui->lineEditGehalt->text() != "")
-    {
+    if (ui->lineEditName->text() != "" && ui->lineEditPersonalnummer->text() != ""
+        && ui->lineEditGehalt->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text() + "%' AND personalnummer LIKE '" + ui->lineEditPersonalnummer->text() + "' AND gehalt >= '" + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text()
+                          + "%' AND personalnummer LIKE '" + ui->lineEditPersonalnummer->text()
+                          + "' AND gehalt >= '" + ui->lineEditGehalt->text()
+                          + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
-    if(ui->lineEditNachanme->text() != "" && ui->lineEditPersonalnummer->text() != "" && ui->lineEditGehalt->text() != "")
-    {
+    if (ui->lineEditNachanme->text() != "" && ui->lineEditPersonalnummer->text() != ""
+        && ui->lineEditGehalt->text() != "") {
         ui->ListAusgabe->clear();
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE nachname LIKE '%" + ui->lineEditNachanme->text() + "%' AND personalnummer LIKE '" + ui->lineEditPersonalnummer->text() + "' AND gehalt >= '" + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
+        sqlBefehl.prepare("SELECT * FROM personen WHERE nachname LIKE '%"
+                          + ui->lineEditNachanme->text() + "%' AND personalnummer LIKE '"
+                          + ui->lineEditPersonalnummer->text() + "' AND gehalt >= '"
+                          + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '"
+                          + ui->lineEditGehalt->text() + "' * 1.1");
         sqlBefehl.exec();
         FehlerAnzeigen();
         Ausgabe(5);
     }
 
     //Vier Felder ausgefüllt
-    if(ui->lineEditName->text() != "" && ui->lineEditNachanme->text() != "" && ui->lineEditPersonalnummer->text() != "" && ui->lineEditGehalt->text() != "")
-    {
-        ui->ListAusgabe->clear();
+    (ui->lineEditName->text() != "" && ui->lineEditNachanme->text() != ""
+     && ui->lineEditPersonalnummer->text() != "" && ui->lineEditGehalt->text() != "") {
+        ui->ListAusgabe->clear();*/
 
-        sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE '%" + ui->lineEditName->text() + "%' AND nachname LIKE '%" + ui->lineEditNachanme->text() + "%' AND personalnummer = '" + ui->lineEditPersonalnummer->text() + "' AND gehalt >= '" + ui->lineEditGehalt->text() + "' * 0.9 AND gehalt <= '" + ui->lineEditGehalt->text() + "' * 1.1");
-        sqlBefehl.exec();
-        FehlerAnzeigen();
-        Ausgabe(5);
-    }
-
-
+    sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE :name AND nachname LIKE '"
+                      + anyIfEmpty(ui->lineEditNachanme->text(), true)
+                      + "'"); /* "' AND personalnummer = '"
+                      + anyIfEmpty(ui->lineEditPersonalnummer->text(), false) + "' AND gehalt >= '"
+                      + anyIfEmpty(ui->lineEditGehalt->text(), false) + "' * 0.9 AND gehalt <= '"
+                      + anyIfEmpty(ui->lineEditGehalt->text(), false) + "' * 1.1");*/
+    sqlBefehl.bindValue(":name", anyIfEmpty(ui->lineEditName->text(), true));
+    sqlBefehl.bindValue(":name", anyIfEmpty(ui->lineEditName->text(), true));
+    sqlBefehl.bindValue(":name", anyIfEmpty(ui->lineEditPersonalnummer->text(), false), true));
+    sqlBefehl.bindValue(":name", anyIfEmpty(ui->lineEditName->text(), true));
+    sqlBefehl.exec();
+    FehlerAnzeigen();
+    Ausgabe(5);
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     delete ui;
+}
+
+QString MainWindow::anyIfEmpty(QString value, bool matchIncomplete) {
+    if (value.isEmpty())
+        return "%";
+    if (matchIncomplete)
+        return "%" + value + "%";
+    return value;
 }

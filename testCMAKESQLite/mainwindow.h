@@ -25,6 +25,8 @@ private:
     QSqlQuery sqlBefehl;
     QSqlDatabase con;
     QMessageBox box;
+
+    QString anyIfEmpty(QString, bool);
 private slots:
     void FehlerAnzeigen();
     void pushButtonAlleAnsehenClicked();
