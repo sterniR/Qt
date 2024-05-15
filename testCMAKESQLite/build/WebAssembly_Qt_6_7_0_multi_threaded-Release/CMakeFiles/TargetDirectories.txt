@@ -1,0 +1,9 @@
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/testCMAKESQLite.dir
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/install.dir
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/install/strip.dir
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/testCMAKESQLite_autogen_timestamp_deps.dir
+/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/CMakeFiles/testCMAKESQLite_autogen.dir

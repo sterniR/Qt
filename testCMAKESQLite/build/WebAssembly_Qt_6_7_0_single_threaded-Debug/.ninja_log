@@ -1,0 +1,25 @@
+# ninja log v5
+0	423	1715764130810378158	testCMAKESQLite_autogen/timestamp	2ebf7573057fa706
+0	423	1715764130810378158	testCMAKESQLite_autogen/mocs_compilation.cpp	2ebf7573057fa706
+0	423	1715764130810378158	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/testCMAKESQLite_autogen/timestamp	2ebf7573057fa706
+0	423	1715764130810378158	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/testCMAKESQLite_autogen/mocs_compilation.cpp	2ebf7573057fa706
+423	3207	1715764133574409506	CMakeFiles/testCMAKESQLite.dir/main.cpp.o	a55d2a7ac48833ae
+423	3314	1715764133678410684	CMakeFiles/testCMAKESQLite.dir/testCMAKESQLite_autogen/mocs_compilation.cpp.o	a09d7c1376dd3eca
+3	13	1715764351808779907	testCMAKESQLite_autogen/timestamp	2ebf7573057fa706
+3	13	1715764351808779907	testCMAKESQLite_autogen/mocs_compilation.cpp	2ebf7573057fa706
+3	13	1715764351808779907	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/testCMAKESQLite_autogen/timestamp	2ebf7573057fa706
+3	13	1715764351808779907	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/testCMAKESQLite_autogen/mocs_compilation.cpp	2ebf7573057fa706
+15	2538	1715764354312806069	CMakeFiles/testCMAKESQLite.dir/mainwindow.cpp.o	b72e81500ff2c698
+2538	4122	1715764355900822651	testCMAKESQLite.js	9ff61b8f0b0b58fa
+3	13	1715764503190328360	testCMAKESQLite_autogen/timestamp	2ebf7573057fa706
+3	13	1715764503190328360	testCMAKESQLite_autogen/mocs_compilation.cpp	2ebf7573057fa706
+3	13	1715764503190328360	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/testCMAKESQLite_autogen/timestamp	2ebf7573057fa706
+3	13	1715764503190328360	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/testCMAKESQLite_autogen/mocs_compilation.cpp	2ebf7573057fa706
+14	2532	1715764505690353420	CMakeFiles/testCMAKESQLite.dir/mainwindow.cpp.o	b72e81500ff2c698
+2533	3958	1715764507126367808	testCMAKESQLite.js	9ff61b8f0b0b58fa
+3	15	1715764558222876639	testCMAKESQLite_autogen/timestamp	2ebf7573057fa706
+3	15	1715764558222876639	testCMAKESQLite_autogen/mocs_compilation.cpp	2ebf7573057fa706
+3	15	1715764558222876639	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/testCMAKESQLite_autogen/timestamp	2ebf7573057fa706
+3	15	1715764558222876639	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/testCMAKESQLite_autogen/mocs_compilation.cpp	2ebf7573057fa706
+16	2590	1715764560778901939	CMakeFiles/testCMAKESQLite.dir/mainwindow.cpp.o	b72e81500ff2c698
+2590	4063	1715764562262916622	testCMAKESQLite.js	9ff61b8f0b0b58fa

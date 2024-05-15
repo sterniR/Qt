@@ -325,16 +325,14 @@ void MainWindow::pushButtonFilternClicked() {
      && ui->lineEditPersonalnummer->text() != "" && ui->lineEditGehalt->text() != "") {
         ui->ListAusgabe->clear();*/
 
-    sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE :name AND nachname LIKE '"
-                      + anyIfEmpty(ui->lineEditNachanme->text(), true)
-                      + "'"); /* "' AND personalnummer = '"
-                      + anyIfEmpty(ui->lineEditPersonalnummer->text(), false) + "' AND gehalt >= '"
-                      + anyIfEmpty(ui->lineEditGehalt->text(), false) + "' * 0.9 AND gehalt <= '"
-                      + anyIfEmpty(ui->lineEditGehalt->text(), false) + "' * 1.1");*/
+    sqlBefehl.prepare("SELECT * FROM personen WHERE name LIKE :name AND "
+                      "nachname LIKE :nachname AND "
+                      "personalnummer = :personalnummer AND "
+                      "gehalt >= :gehalt * 0.9 AND gehalt <= :gehalt * 1.1");
     sqlBefehl.bindValue(":name", anyIfEmpty(ui->lineEditName->text(), true));
-    sqlBefehl.bindValue(":name", anyIfEmpty(ui->lineEditName->text(), true));
-    sqlBefehl.bindValue(":name", anyIfEmpty(ui->lineEditPersonalnummer->text(), false), true));
-    sqlBefehl.bindValue(":name", anyIfEmpty(ui->lineEditName->text(), true));
+    sqlBefehl.bindValue(":nachname", anyIfEmpty(ui->lineEditName->text(), true));
+    sqlBefehl.bindValue(":personalnummer", anyIfEmpty(ui->lineEditPersonalnummer->text(), false));
+    sqlBefehl.bindValue(":gehalt", anyIfEmpty(ui->lineEditGehalt->text(), true));
     sqlBefehl.exec();
     FehlerAnzeigen();
     Ausgabe(5);

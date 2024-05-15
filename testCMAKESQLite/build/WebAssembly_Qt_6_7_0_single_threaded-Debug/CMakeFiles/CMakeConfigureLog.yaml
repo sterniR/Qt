@@ -1,0 +1,180 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:206 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The target system is: Emscripten - 1 - x86
+      The host system is: Linux - 6.1.0-21-amd64 - x86_64
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_qt_dependencies)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:167 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-XbWY0P"
+      binary: "/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-XbWY0P"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/platforms;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/platforms;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-XbWY0P'
+        
+        Run Build Command(s): /home/roman/Qt/Tools/Ninja/ninja -v cmTC_78780
+        [1/2] /home/roman/emsdk/upstream/emscripten/em++ -DHAVE_STDATOMIC  -DQT_QML_DEBUG  -std=gnu++17 -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_78780.dir/src.cxx.o -MF CMakeFiles/cmTC_78780.dir/src.cxx.o.d -o CMakeFiles/cmTC_78780.dir/src.cxx.o -c /home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-XbWY0P/src.cxx
+        [2/2] : && /home/roman/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_78780.dir/src.cxx.o -o cmTC_78780.js   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/FindWrapRt.cmake:23 (check_cxx_source_compiles)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_qt_dependencies)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:167 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_GETTIME"
+    directories:
+      source: "/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4xJwF0"
+      binary: "/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4xJwF0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/platforms;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/platforms;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_GETTIME"
+      cached: true
+      stdout: |
+        Change Dir: '/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4xJwF0'
+        
+        Run Build Command(s): /home/roman/Qt/Tools/Ninja/ninja -v cmTC_69980
+        [1/2] /home/roman/emsdk/upstream/emscripten/em++ -DHAVE_GETTIME  -DQT_QML_DEBUG  -std=gnu++17 -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_69980.dir/src.cxx.o -MF CMakeFiles/cmTC_69980.dir/src.cxx.o.d -o CMakeFiles/cmTC_69980.dir/src.cxx.o -c /home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-4xJwF0/src.cxx
+        [2/2] : && /home/roman/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_69980.dir/src.cxx.o -o cmTC_69980.js   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/FindWrapRt.cmake:34 (check_cxx_source_compiles)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_qt_dependencies)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:167 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_SHM_OPEN_SHM_UNLINK"
+    directories:
+      source: "/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-OZsGCF"
+      binary: "/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-OZsGCF"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/platforms;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/platforms;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_SHM_OPEN_SHM_UNLINK"
+      cached: true
+      stdout: |
+        Change Dir: '/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-OZsGCF'
+        
+        Run Build Command(s): /home/roman/Qt/Tools/Ninja/ninja -v cmTC_4a911
+        [1/2] /home/roman/emsdk/upstream/emscripten/em++ -DHAVE_SHM_OPEN_SHM_UNLINK  -DQT_QML_DEBUG  -std=gnu++17 -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_4a911.dir/src.cxx.o -MF CMakeFiles/cmTC_4a911.dir/src.cxx.o.d -o CMakeFiles/cmTC_4a911.dir/src.cxx.o -c /home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-OZsGCF/src.cxx
+        [2/2] : && /home/roman/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_4a911.dir/src.cxx.o -o cmTC_4a911.js   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake:127 (check_cxx_source_compiles)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:43 (include)"
+      - "/home/roman/Qt/Tools/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:111 (find_dependency)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_qt_dependencies)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:43 (include)"
+      - "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/Qt6Config.cmake:167 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    checks:
+      - "Performing Test HAVE_EGL"
+    directories:
+      source: "/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-2inJtI"
+      binary: "/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-2inJtI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/platforms;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/platforms;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/emsdk/upstream/emscripten/cmake/Modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake/Qt6/3rdparty/kwin"
+      QT_ADDITIONAL_PACKAGES_PREFIX_PATH: ""
+      QT_CHAINLOAD_TOOLCHAIN_FILE: ""
+      QT_TOOLCHAIN_INCLUDE_FILE: ""
+      QT_TOOLCHAIN_RELOCATABLE_CMAKE_DIR: "/home/roman/Qt/6.7.0/wasm_singlethread/lib/cmake"
+      QT_TOOLCHAIN_RELOCATABLE_PREFIX: ""
+    buildResult:
+      variable: "HAVE_EGL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-2inJtI'
+        
+        Run Build Command(s): /home/roman/Qt/Tools/Ninja/ninja -v cmTC_72789
+        [1/2] /home/roman/emsdk/upstream/emscripten/em++ -DHAVE_EGL  -DQT_QML_DEBUG  -std=gnu++17 -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_72789.dir/src.cxx.o -MF CMakeFiles/cmTC_72789.dir/src.cxx.o.d -o CMakeFiles/cmTC_72789.dir/src.cxx.o -c /home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/CMakeScratch/TryCompile-2inJtI/src.cxx
+        [2/2] : && /home/roman/emsdk/upstream/emscripten/em++ -DQT_QML_DEBUG  CMakeFiles/cmTC_72789.dir/src.cxx.o -o cmTC_72789.js   && :
+        
+      exitCode: 0
+...

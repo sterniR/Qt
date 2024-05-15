@@ -1,0 +1,1 @@
+set(__QT_DEPLOY_TARGET_rest_network_test_FILE /home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/rest_network_test.js)

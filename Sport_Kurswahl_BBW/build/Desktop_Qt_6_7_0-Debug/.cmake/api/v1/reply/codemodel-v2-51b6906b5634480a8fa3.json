@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-9d36c95a5ef3a375f4b7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Sport_Kurswahl_BBW",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Sport_Kurswahl_BBW::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sport_Kurswahl_BBW-Debug-62301297e6637ec22b4e.json",
+					"name" : "Sport_Kurswahl_BBW",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sport_Kurswahl_BBW_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sport_Kurswahl_BBW_autogen-Debug-5bc0ed09579fa6a9fba3.json",
+					"name" : "Sport_Kurswahl_BBW_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sport_Kurswahl_BBW_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sport_Kurswahl_BBW_autogen_timestamp_deps-Debug-9d236e8791352ad7b235.json",
+					"name" : "Sport_Kurswahl_BBW_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/roman/Documents/Qt/Sport_Kurswahl_BBW/build/Desktop_Qt_6_7_0-Debug",
+		"source" : "/home/roman/Documents/Qt/Sport_Kurswahl_BBW"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

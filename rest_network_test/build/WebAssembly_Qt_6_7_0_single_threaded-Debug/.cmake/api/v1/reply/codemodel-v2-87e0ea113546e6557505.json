@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-373f95f871066e23f89e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rest_network_test",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "rest_network_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rest_network_test-Debug-1ff77505a01265b213ac.json",
+					"name" : "rest_network_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rest_network_test_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rest_network_test_autogen-Debug-05c1120d5489bc10634b.json",
+					"name" : "rest_network_test_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rest_network_test_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rest_network_test_autogen_timestamp_deps-Debug-b15012ceec8b85c19f42.json",
+					"name" : "rest_network_test_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug",
+		"source" : "/home/roman/Documents/Qt/rest_network_test"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

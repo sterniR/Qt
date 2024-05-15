@@ -1,0 +1,9 @@
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/rest_network_test.dir
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/install.dir
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/install/strip.dir
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/rest_network_test_autogen_timestamp_deps.dir
+/home/roman/Documents/Qt/rest_network_test/build/WebAssembly_Qt_6_7_0_single_threaded-Debug/CMakeFiles/rest_network_test_autogen.dir

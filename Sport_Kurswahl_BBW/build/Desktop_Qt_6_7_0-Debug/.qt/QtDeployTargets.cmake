@@ -1,0 +1,1 @@
+set(__QT_DEPLOY_TARGET_Sport_Kurswahl_BBW_FILE /home/roman/Documents/Qt/Sport_Kurswahl_BBW/build/Desktop_Qt_6_7_0-Debug/Sport_Kurswahl_BBW)

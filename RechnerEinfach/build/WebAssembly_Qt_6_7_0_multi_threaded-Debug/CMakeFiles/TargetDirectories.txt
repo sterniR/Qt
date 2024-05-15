@@ -1,0 +1,8 @@
+/home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/CMakeFiles/RechnerEinfach.dir
+/home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/CMakeFiles/install.dir
+/home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/CMakeFiles/install/strip.dir
+/home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/CMakeFiles/RechnerEinfach_autogen.dir

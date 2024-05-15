@@ -1,0 +1,1 @@
+set(__QT_DEPLOY_TARGET_RechnerEinfach_FILE /home/roman/Documents/Qt/RechnerEinfach/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/RechnerEinfach.js)

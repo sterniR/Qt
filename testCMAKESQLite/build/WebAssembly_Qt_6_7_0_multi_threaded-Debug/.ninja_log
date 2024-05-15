@@ -1,0 +1,12 @@
+# ninja log v5
+0	420	1715756327952578861	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/testCMAKESQLite_autogen/timestamp	5e1bd1af3e967b3d
+0	420	1715756327952578861	testCMAKESQLite_autogen/mocs_compilation.cpp	5e1bd1af3e967b3d
+420	3855	1715756331384579624	CMakeFiles/testCMAKESQLite.dir/main.cpp.o	c177496002d8d395
+421	4349	1715756331876579734	CMakeFiles/testCMAKESQLite.dir/mainwindow.cpp.o	1b981bd942215b6
+420	3885	1715756331416579631	CMakeFiles/testCMAKESQLite.dir/testCMAKESQLite_autogen/mocs_compilation.cpp.o	75c6db92aa0dd772
+0	420	1715756327952578861	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Debug/testCMAKESQLite_autogen/mocs_compilation.cpp	5e1bd1af3e967b3d
+0	420	1715756327952578861	testCMAKESQLite_autogen/timestamp	5e1bd1af3e967b3d
+3	2358	1715757567836854487	CMakeFiles/testCMAKESQLite.dir/main.cpp.o	c177496002d8d395
+3	2411	1715757567888854500	CMakeFiles/testCMAKESQLite.dir/testCMAKESQLite_autogen/mocs_compilation.cpp.o	75c6db92aa0dd772
+3	2658	1715757568132854554	CMakeFiles/testCMAKESQLite.dir/mainwindow.cpp.o	1b981bd942215b6
+2658	5190	1715757570660855116	testCMAKESQLite.js	d32e11a587523652

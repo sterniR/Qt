@@ -1,0 +1,1 @@
+set(__QT_DEPLOY_TARGET_testCMAKESQLite_FILE /home/roman/Documents/Qt/testCMAKESQLite/build/Desktop_Qt_6_6_1_GCC_64bit-Debug/testCMAKESQLite)

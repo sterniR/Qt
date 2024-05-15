@@ -1,0 +1,9 @@
+# ninja log v5
+0	350	1715757615868865158	testCMAKESQLite_autogen/timestamp	7b8658e777271c57
+0	350	1715757615868865158	testCMAKESQLite_autogen/mocs_compilation.cpp	7b8658e777271c57
+0	350	1715757615868865158	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/testCMAKESQLite_autogen/timestamp	7b8658e777271c57
+0	350	1715757615868865158	/home/roman/Documents/Qt/testCMAKESQLite/build/WebAssembly_Qt_6_7_0_multi_threaded-Release/testCMAKESQLite_autogen/mocs_compilation.cpp	7b8658e777271c57
+350	3062	1715757618576865759	CMakeFiles/testCMAKESQLite.dir/main.cpp.o	fb450613a86aec2f
+350	3089	1715757618604865766	CMakeFiles/testCMAKESQLite.dir/testCMAKESQLite_autogen/mocs_compilation.cpp.o	a5975e79ffe14c3f
+351	3378	1715757618892865829	CMakeFiles/testCMAKESQLite.dir/mainwindow.cpp.o	4c8b2a23929ca51
+3378	40684	1715757656196874114	testCMAKESQLite.js	dc0615808d92a14
