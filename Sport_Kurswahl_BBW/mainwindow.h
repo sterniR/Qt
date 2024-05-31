@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-    QNetworkAccessManager * manager;
+    QNetworkAccessManager *manager;
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -23,7 +23,8 @@ public:
 private:
     Ui::MainWindow *ui;
 private slots:
-    void pushRequest();
-    void plainText();
+    void replyFinished(QNetworkReply *reply);
+    void pushRequestBereich();
+    void pushRequestKurse();
 };
 #endif // MAINWINDOW_H
