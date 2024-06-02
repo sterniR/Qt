@@ -1,7 +1,7 @@
 #include "mainwindow.h"
+#include <QNetworkReply>
 #include "./ui_mainwindow.h"
 #include "json.hpp"
-#include <QNetworkReply>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
