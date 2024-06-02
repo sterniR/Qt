@@ -1,0 +1,9 @@
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/Vokabeln.dir
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/edit_cache.dir
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/rebuild_cache.dir
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/list_install_components.dir
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/install.dir
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/install/local.dir
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/install/strip.dir
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/Vokabeln_autogen_timestamp_deps.dir
+/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/Vokabeln_autogen.dir
