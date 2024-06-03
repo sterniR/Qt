@@ -1,0 +1,9 @@
+# ninja log v5
+0	476	1717419742843464343	Vokabeln_autogen/timestamp	5193224c02d2528c
+0	476	1717419742843464343	Vokabeln_autogen/mocs_compilation.cpp	5193224c02d2528c
+0	476	1717419742843464343	/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Clang-Debug/Vokabeln_autogen/timestamp	5193224c02d2528c
+0	476	1717419742843464343	/home/roman/Documents/Qt/Cpluplus_Buch/Vokabeln/build/Clang-Debug/Vokabeln_autogen/mocs_compilation.cpp	5193224c02d2528c
+476	2844	1717419745207516392	CMakeFiles/Vokabeln.dir/main.cpp.o	40a81dcf455cd3ac
+476	2870	1717419745235517008	CMakeFiles/Vokabeln.dir/Vokabeln_autogen/mocs_compilation.cpp.o	501c7268957ca5f0
+476	3137	1717419745499522821	CMakeFiles/Vokabeln.dir/mainwindow.cpp.o	8a7644f07aa8cfad
+3137	3410	1717419745779528985	Vokabeln	89c7d98e92114da9
