@@ -191,7 +191,14 @@ void MainWindow::CmdPruefenClicked()
 
 void MainWindow::CmdTestBeendenClicked()
 {
-
+    QMessageBox mb;
+    mb.setText("TEst beenden?");
+    mb.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    mb.setButtonText(QMessageBox::Yes, "Ja");
+    mb.setButtonText(QMessageBox::No, "Nein");
+    mb.setDefaultButton(QMessageBox::No);
+    if(mb.exec() == QMessageBox::Yes)
+        AuswahlInit();
 }
 
 void MainWindow::CmdNeuEingabeStartenClicked()
