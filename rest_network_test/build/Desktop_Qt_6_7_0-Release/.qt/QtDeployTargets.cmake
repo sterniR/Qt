@@ -1,1 +1,0 @@
-set(__QT_DEPLOY_TARGET_rest_network_test_FILE /home/roman/Documents/Qt/rest_network_test/build/Desktop_Qt_6_7_0-Release/rest_network_test)

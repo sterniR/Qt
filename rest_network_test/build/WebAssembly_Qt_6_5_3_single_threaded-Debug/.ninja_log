@@ -1,0 +1,9 @@
+# ninja log v5
+1	317	7380289028789110	rest_network_test_autogen/timestamp	5f3e4ddd05a11f74
+1	317	7380289028789110	rest_network_test_autogen/mocs_compilation.cpp	5f3e4ddd05a11f74
+1	317	7380289028789110	C:/Qt/Projects/Qt/rest_network_test/build/WebAssembly_Qt_6_5_3_single_threaded-Debug/rest_network_test_autogen/timestamp	5f3e4ddd05a11f74
+1	317	7380289028789110	C:/Qt/Projects/Qt/rest_network_test/build/WebAssembly_Qt_6_5_3_single_threaded-Debug/rest_network_test_autogen/mocs_compilation.cpp	5f3e4ddd05a11f74
+320	1488	7380289040631014	CMakeFiles/rest_network_test.dir/main.cpp.o	370cce5fd7bca4de
+318	1524	7380289040993290	CMakeFiles/rest_network_test.dir/rest_network_test_autogen/mocs_compilation.cpp.o	8e5ba0620d0ff149
+324	2753	7380289053202749	CMakeFiles/rest_network_test.dir/mainwindow.cpp.o	b27078c16a4b6ced
+2754	4130	7380289067049070	rest_network_test.js	dd3e2486b15158d6
