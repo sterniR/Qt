@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->CmdRichtung->addItem("Französisch - Englisch");
 
     //Anfangszustand einstellen
-    this->resize(430, 165);
+    this->resize(650, 575);
     this->setWindowTitle("Vokabeln");
     AuswahlInit();
 }
@@ -114,7 +114,24 @@ void MainWindow::NaechsteVokabeln()
 
 void MainWindow::TabelleAnzeige()
 {
+    // Alle Datensätze holen
+    sqlBefehl.exec("SELECT * FROM vokabeln ORDER BY deu");
+    FehlerAnzeige();
 
+    // QVector und List Widget leeren
+    idFeld.clear();
+    ui->LstDeu->clear();
+    ui->LstEng->clear();
+    ui->LstFra->clear();
+
+    // QVector und List Widgets füllen
+    while(sqlBefehl.next())
+    {
+        idFeld.append(sqlBefehl.value(0).toInt());
+        ui->LstDeu->addItem(sqlBefehl.value(1).toString());
+        ui->LstEng->addItem(sqlBefehl.value(2).toString());
+        ui->LstFra->addItem(sqlBefehl.value(3).toString());
+    }
 }
 
 void MainWindow::CmdRichtungCurrentIndexChanged(int index)
@@ -154,7 +171,9 @@ void MainWindow::CmdRichtungCurrentIndexChanged(int index)
 
 void MainWindow::LstDeuItemSelectionChanged()
 {
-
+    int nummer = ui->LstDeu->currentRow();
+    ui->LstEng->setCurrentRow((nummer));
+    ui->LstFra->setCurrentRow((nummer));
 }
 
 void MainWindow::CmdTestStartenClicked()
@@ -203,21 +222,69 @@ void MainWindow::CmdTestBeendenClicked()
 
 void MainWindow::CmdNeuEingabeStartenClicked()
 {
-
+    // Anwendungsfenster vergrößern, List Widgets füllen
+    ui->CmdRichtung->setEnabled(false);
+    ui->CmdNeuEingabeStarten->setEnabled(false);
+    // this->resize(490, 420);
+    TabelleAnzeige();
 }
 
 void MainWindow::CmdNeuEingabeSpeichernClicked()
 {
+    // Alle Eingabefelder gefüllt?
+    if(ui->EdtDeu->text() == "" || ui->EdtEng->text() == "" || ui->EdtFra->text() == "")
+    {
+        QMessageBox mb;
+        mb.setText("Alle drei Eingabefelder füllen");
+        mb.exec();
+        return;
+    }
 
+    // Nächste freie ID suchen
+    sqlBefehl.exec("SELECT * FROM vokabeln ORDER BY id DESC LIMIT 1");
+    FehlerAnzeige();
+    sqlBefehl.next();
+    int idNeu = sqlBefehl.value(0).toInt() + 1;
+
+    //Datensatz einfügen
+    sqlBefehl.exec("INSERT INTO vokabeln VALUES("
+                    + QString::number(idNeu) + ", '"
+                    + ui->EdtDeu->text() + "', '"
+                    + ui->EdtDeu->text() + "', '"
+                   + ui->EdtFra->text() + "')");
+    FehlerAnzeige();
+
+    //Eingabefelder löschen, List Widgets neu füllen
+    ui->EdtDeu->clear();
+    ui->EdtEng->clear();
+    ui->EdtFra->clear();
+    TabelleAnzeige();
 }
 
 void MainWindow::CmdAuswahlLoeschenClicked()
 {
-
+    // ID ermitteln
+    int zeile = ui->LstDeu->currentRow();
+    if(zeile == -1)
+    {
+        QMessageBox mb;
+        mb.setText("Eintrag zum Löschen markieren");
+        mb.exec();
+        return;
+    }
+    int id = idFeld.at(zeile);
+    // Datensatz löschen, List Widgets neu füllen
+    sqlBefehl.exec("DELETE FROM vokabeln WHERE id = "
+                   + QString::number(id));
+    FehlerAnzeige();
+    TabelleAnzeige();
 }
 
 void MainWindow::CmdNeuEingabeBeendenClicked()
 {
-
+    // Anwendungsfenster verkleinern
+    this->resize(650, 575);
+    ui->CmdRichtung->setEnabled(true);
+    ui->CmdNeuEingabeStarten->setEnabled(true);
 }
 
